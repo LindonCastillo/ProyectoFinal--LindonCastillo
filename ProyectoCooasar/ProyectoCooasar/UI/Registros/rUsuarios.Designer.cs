@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rUsuarios));
             this.label2 = new System.Windows.Forms.Label();
             this.Nombre_textBox = new System.Windows.Forms.TextBox();
@@ -46,7 +47,9 @@
             this.Usuario_textBox = new System.Windows.Forms.TextBox();
             this.Clave_textBox = new System.Windows.Forms.TextBox();
             this.FechaIngreso_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioId_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -217,6 +220,10 @@
             this.FechaIngreso_dateTimePicker.Size = new System.Drawing.Size(173, 20);
             this.FechaIngreso_dateTimePicker.TabIndex = 27;
             // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
+            // 
             // rUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +250,7 @@
             this.Name = "rUsuarios";
             this.Text = "Registro de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioId_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +275,6 @@
         private System.Windows.Forms.TextBox Usuario_textBox;
         private System.Windows.Forms.TextBox Clave_textBox;
         private System.Windows.Forms.DateTimePicker FechaIngreso_dateTimePicker;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
     }
 }
