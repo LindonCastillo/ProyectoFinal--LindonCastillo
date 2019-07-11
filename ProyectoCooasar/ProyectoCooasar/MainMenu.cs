@@ -42,5 +42,18 @@ namespace ProyectoCooasar
             cProductos p = new cProductos();
             p.Show();
         }
+
+        private void UsuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            rUsuarios u = new rUsuarios();
+            u.Show();
+        }
+
+        private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cUsuarios  u = new cUsuarios();
+            u.Show();
+
+        }
     }
 }

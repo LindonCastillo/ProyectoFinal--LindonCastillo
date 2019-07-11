@@ -96,6 +96,12 @@
     <Compile Include="UI\Registros\rProveedores.Designer.cs">
       <DependentUpon>rProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rUsuarios.Designer.cs">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rProveedores.resx">
       <DependentUpon>rProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

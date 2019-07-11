@@ -35,10 +35,10 @@
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +98,14 @@
             this.ordenDeCompraToolStripMenuItem.Text = "&Orden de Compra";
             this.ordenDeCompraToolStripMenuItem.Click += new System.EventHandler(this.OrdenDeCompraToolStripMenuItem_Click);
             // 
+            // usuariosToolStripMenuItem1
+            // 
+            this.usuariosToolStripMenuItem1.Image = global::ProyectoCooasar.Properties.Resources.User_icon;
+            this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
+            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem1.Text = "&Usuarios";
+            this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.UsuariosToolStripMenuItem1_Click);
+            // 
             // productosToolStripMenuItem1
             // 
             this.productosToolStripMenuItem1.Image = global::ProyectoCooasar.Properties.Resources.box_40302_640_icon;
@@ -105,6 +113,14 @@
             this.productosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem1.Text = "&Productos";
             this.productosToolStripMenuItem1.Click += new System.EventHandler(this.ProductosToolStripMenuItem1_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Image = global::ProyectoCooasar.Properties.Resources.User_icon;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Text = "&Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -115,20 +131,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Image = global::ProyectoCooasar.Properties.Resources.User_icon;
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.usuariosToolStripMenuItem.Text = "&Usuarios";
-            // 
-            // usuariosToolStripMenuItem1
-            // 
-            this.usuariosToolStripMenuItem1.Image = global::ProyectoCooasar.Properties.Resources.User_icon;
-            this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
-            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.usuariosToolStripMenuItem1.Text = "&Usuarios";
             // 
             // MainMenu
             // 
