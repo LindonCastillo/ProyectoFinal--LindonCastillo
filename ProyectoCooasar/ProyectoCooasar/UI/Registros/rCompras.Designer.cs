@@ -1,6 +1,6 @@
 ﻿namespace ProyectoCooasar.UI.Registros
 {
-    partial class rOrdenCompra
+    partial class rCompras
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rOrdenCompra));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rCompras));
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -101,9 +101,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(38, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 21);
+            this.label3.Size = new System.Drawing.Size(139, 21);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Detalle de Orden";
+            this.label3.Text = "Detalle de Compra";
             // 
             // dateTimePicker1
             // 
@@ -317,7 +317,7 @@
             this.Nuevo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevo_button.UseVisualStyleBackColor = true;
             // 
-            // rOrdenCompra
+            // rCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -338,8 +338,8 @@
             this.Controls.Add(this.Guardar_button);
             this.Controls.Add(this.Nuevo_button);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "rOrdenCompra";
-            this.Text = "Registro de Orden Compra";
+            this.Name = "rCompras";
+            this.Text = "Registro de Compras";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

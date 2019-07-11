@@ -60,11 +60,17 @@
     <Compile Include="UI\Consultas\cProductos.Designer.cs">
       <DependentUpon>cProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\rOrdenCompra.cs">
+    <Compile Include="UI\Consultas\cUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\rOrdenCompra.Designer.cs">
-      <DependentUpon>rOrdenCompra.cs</DependentUpon>
+    <Compile Include="UI\Consultas\cUsuarios.Designer.cs">
+      <DependentUpon>cUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rCompras.Designer.cs">
+      <DependentUpon>rCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rProductos.cs">
       <SubType>Form</SubType>
@@ -94,8 +100,11 @@
     <EmbeddedResource Include="UI\Consultas\cProductos.resx">
       <DependentUpon>cProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\rOrdenCompra.resx">
-      <DependentUpon>rOrdenCompra.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Consultas\cUsuarios.resx">
+      <DependentUpon>cUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rCompras.resx">
+      <DependentUpon>rCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rProductos.resx">
       <DependentUpon>rProductos.cs</DependentUpon>
@@ -139,6 +148,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\seo-social-web-network-internet_322_icon-icons.com_61532.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="Entidades\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,7 +33,7 @@ namespace ProyectoCooasar
 
         private void OrdenDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rOrdenCompra o = new rOrdenCompra();
+            rCompras o = new rCompras();
             o.Show();
         }
 

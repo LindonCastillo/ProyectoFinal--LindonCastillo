@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoCooasar.UI.Registros
 {
-    public partial class rOrdenCompra : Form
+    public partial class rCompras : Form
     {
-        public rOrdenCompra()
+        public rCompras()
         {
             InitializeComponent();
         }
