@@ -176,7 +176,7 @@ namespace ProyectoCooasar.UI.Registros
                 if (Usuario != null)
                 {
                     LlenarCampos(Usuario);
-                    MessageBox.Show("Usuario Encontrada!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario Encontrado!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
