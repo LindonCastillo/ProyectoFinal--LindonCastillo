@@ -39,6 +39,7 @@
             this.Desde_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Imprimir_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Consulta_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(373, 9);
+            this.label3.Location = new System.Drawing.Point(373, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 12;
@@ -56,7 +57,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(246, 9);
+            this.label2.Location = new System.Drawing.Point(246, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 11;
@@ -65,7 +66,7 @@
             // Criterio_textBox
             // 
             this.Criterio_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Criterio_textBox.Location = new System.Drawing.Point(376, 28);
+            this.Criterio_textBox.Location = new System.Drawing.Point(376, 37);
             this.Criterio_textBox.Name = "Criterio_textBox";
             this.Criterio_textBox.Size = new System.Drawing.Size(185, 22);
             this.Criterio_textBox.TabIndex = 10;
@@ -79,7 +80,7 @@
             "Id",
             "Nombre",
             "Usuario"});
-            this.Filtro_comboBox.Location = new System.Drawing.Point(249, 28);
+            this.Filtro_comboBox.Location = new System.Drawing.Point(249, 37);
             this.Filtro_comboBox.Name = "Filtro_comboBox";
             this.Filtro_comboBox.Size = new System.Drawing.Size(118, 23);
             this.Filtro_comboBox.TabIndex = 9;
@@ -89,10 +90,10 @@
             this.Consulta_dataGridView.AllowUserToAddRows = false;
             this.Consulta_dataGridView.AllowUserToDeleteRows = false;
             this.Consulta_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Consulta_dataGridView.Location = new System.Drawing.Point(12, 57);
+            this.Consulta_dataGridView.Location = new System.Drawing.Point(15, 78);
             this.Consulta_dataGridView.Name = "Consulta_dataGridView";
             this.Consulta_dataGridView.ReadOnly = true;
-            this.Consulta_dataGridView.Size = new System.Drawing.Size(657, 322);
+            this.Consulta_dataGridView.Size = new System.Drawing.Size(657, 299);
             this.Consulta_dataGridView.TabIndex = 7;
             // 
             // Consultar_button
@@ -100,7 +101,7 @@
             this.Consultar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Consultar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
             this.Consultar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Consultar_button.Location = new System.Drawing.Point(567, 23);
+            this.Consultar_button.Location = new System.Drawing.Point(569, 12);
             this.Consultar_button.Name = "Consultar_button";
             this.Consultar_button.Size = new System.Drawing.Size(102, 27);
             this.Consultar_button.TabIndex = 8;
@@ -114,7 +115,7 @@
             this.Hasta_dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hasta_dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hasta_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Hasta_dateTimePicker.Location = new System.Drawing.Point(125, 29);
+            this.Hasta_dateTimePicker.Location = new System.Drawing.Point(125, 38);
             this.Hasta_dateTimePicker.Name = "Hasta_dateTimePicker";
             this.Hasta_dateTimePicker.Size = new System.Drawing.Size(98, 21);
             this.Hasta_dateTimePicker.TabIndex = 13;
@@ -124,7 +125,7 @@
             this.Desde_dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Desde_dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Desde_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Desde_dateTimePicker.Location = new System.Drawing.Point(15, 28);
+            this.Desde_dateTimePicker.Location = new System.Drawing.Point(15, 37);
             this.Desde_dateTimePicker.Name = "Desde_dateTimePicker";
             this.Desde_dateTimePicker.Size = new System.Drawing.Size(98, 21);
             this.Desde_dateTimePicker.TabIndex = 14;
@@ -133,7 +134,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 15;
@@ -143,17 +144,32 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(122, 9);
+            this.label4.Location = new System.Drawing.Point(122, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 16;
             this.label4.Text = "Hasta";
+            // 
+            // Imprimir_button
+            // 
+            this.Imprimir_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Imprimir_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_83_icon_icons_com_61502;
+            this.Imprimir_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Imprimir_button.Location = new System.Drawing.Point(569, 45);
+            this.Imprimir_button.Name = "Imprimir_button";
+            this.Imprimir_button.Size = new System.Drawing.Size(102, 27);
+            this.Imprimir_button.TabIndex = 17;
+            this.Imprimir_button.Text = "Imprimir";
+            this.Imprimir_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Imprimir_button.UseVisualStyleBackColor = true;
+            this.Imprimir_button.Click += new System.EventHandler(this.Imprimir_button_Click);
             // 
             // cUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 389);
+            this.Controls.Add(this.Imprimir_button);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Desde_dateTimePicker);
@@ -185,5 +201,6 @@
         private System.Windows.Forms.DateTimePicker Desde_dateTimePicker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Imprimir_button;
     }
 }

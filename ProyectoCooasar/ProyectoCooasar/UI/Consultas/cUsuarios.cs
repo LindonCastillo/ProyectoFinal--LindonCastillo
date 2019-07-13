@@ -1,5 +1,6 @@
 ﻿using ProyectoCooasar.BLL;
 using ProyectoCooasar.Entidades;
+using ProyectoCooasar.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +15,10 @@ namespace ProyectoCooasar.UI.Consultas
 {
     public partial class cUsuarios : Form
     {
+        private List<Usuarios> listaUsuarios;
         public cUsuarios()
         {
+            
             InitializeComponent();
         }
 
@@ -23,6 +26,7 @@ namespace ProyectoCooasar.UI.Consultas
         {
             RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
             var listado = new List<Usuarios>();
+
             if (Criterio_textBox.Text.Trim().Length > 0)
             {
                 switch (Filtro_comboBox.SelectedIndex)
@@ -55,13 +59,21 @@ namespace ProyectoCooasar.UI.Consultas
 
                 listado = listado.Where(c => c.FechaIngreso.Date >= Desde_dateTimePicker.Value.Date && c.FechaIngreso.Date <= Hasta_dateTimePicker.Value.Date).ToList();
             }
-            else
+            listaUsuarios = repositorio.GetList(p => true);
+            Consulta_dataGridView.DataSource = null;
+            Consulta_dataGridView.DataSource = listaUsuarios;
+        }
+
+        private void Imprimir_button_Click(object sender, EventArgs e)
+        {
+            if(listaUsuarios.Count == 0)
             {
-                listado = repositorio.GetList(p => true);
+                MessageBox.Show("No Hay Datos Que Imprimir");
+                return;
             }
 
-            Consulta_dataGridView.DataSource = null;
-            Consulta_dataGridView.DataSource = listado;
+            UsuariosReportViewer reportViewer = new UsuariosReportViewer();
+            reportViewer.ShowDialog();
         }
     }
 }
