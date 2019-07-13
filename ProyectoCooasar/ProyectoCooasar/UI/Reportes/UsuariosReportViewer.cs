@@ -22,6 +22,9 @@ namespace ProyectoCooasar.UI.Reportes
 
         private void Usuarios_crystalReportViewer_Load(object sender, EventArgs e)
         {
+            ListadoUsuario listadoUsuario = new ListadoUsuario();
+            listadoUsuario.SetDataSource(listaUsuarios);
+
             Usuarios_crystalReportViewer.ReportSource = listaUsuarios;
             Usuarios_crystalReportViewer.Refresh();
         }

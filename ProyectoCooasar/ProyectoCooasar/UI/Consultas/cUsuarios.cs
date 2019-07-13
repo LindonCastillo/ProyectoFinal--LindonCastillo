@@ -18,7 +18,7 @@ namespace ProyectoCooasar.UI.Consultas
         private List<Usuarios> listaUsuarios;
         public cUsuarios()
         {
-            
+
             InitializeComponent();
         }
 
@@ -66,13 +66,13 @@ namespace ProyectoCooasar.UI.Consultas
 
         private void Imprimir_button_Click(object sender, EventArgs e)
         {
-            if(listaUsuarios.Count == 0)
+            if (listaUsuarios.Count == 0)
             {
                 MessageBox.Show("No Hay Datos Que Imprimir");
                 return;
             }
 
-            UsuariosReportViewer reportViewer = new UsuariosReportViewer();
+            UsuariosReportViewer reportViewer = new UsuariosReportViewer(listaUsuarios);
             reportViewer.ShowDialog();
         }
     }
