@@ -60,8 +60,8 @@ namespace ProyectoCooasar.UI.Consultas
                 listado = listado.Where(c => c.FechaIngreso.Date >= Desde_dateTimePicker.Value.Date && c.FechaIngreso.Date <= Hasta_dateTimePicker.Value.Date).ToList();
             }
             listaUsuarios = repositorio.GetList(p => true);
-            //Consulta_dataGridView.DataSource = null;
-            //Consulta_dataGridView.DataSource = listaUsuarios;
+            Consulta_dataGridView.DataSource = null;
+            Consulta_dataGridView.DataSource = listaUsuarios;
         }
 
         private void Imprimir_button_Click(object sender, EventArgs e)
