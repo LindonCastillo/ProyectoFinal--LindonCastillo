@@ -39,16 +39,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.Remover_button = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.Remover_button = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Buscar_button = new System.Windows.Forms.Button();
             this.Eliminar_button = new System.Windows.Forms.Button();
@@ -73,14 +73,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(334, 98);
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(292, 99);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 10;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(121, 21);
+            this.numericUpDown1.Location = new System.Drawing.Point(95, 21);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(116, 20);
             this.numericUpDown1.TabIndex = 9;
@@ -91,9 +93,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 16);
+            this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 8;
-            this.label1.Text = "OrdenCompraId";
+            this.label1.Text = "CompraId";
             // 
             // label3
             // 
@@ -108,7 +110,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(121, 62);
+            this.dateTimePicker1.Location = new System.Drawing.Point(95, 62);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(210, 20);
             this.dateTimePicker1.TabIndex = 14;
@@ -153,23 +155,12 @@
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.Location = new System.Drawing.Point(299, 255);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(142, 20);
             this.textBox3.TabIndex = 22;
-            // 
-            // Remover_button
-            // 
-            this.Remover_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Remover_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_322_icon_icons_com_61532;
-            this.Remover_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Remover_button.Location = new System.Drawing.Point(19, 248);
-            this.Remover_button.Name = "Remover_button";
-            this.Remover_button.Size = new System.Drawing.Size(139, 30);
-            this.Remover_button.TabIndex = 21;
-            this.Remover_button.Text = "Remover Fila";
-            this.Remover_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Remover_button.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -197,17 +188,6 @@
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(69, 20);
             this.numericUpDown3.TabIndex = 17;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.button2.Location = new System.Drawing.Point(164, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 26);
-            this.button2.TabIndex = 15;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -241,7 +221,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(259, 102);
+            this.label5.Location = new System.Drawing.Point(217, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 16);
             this.label5.TabIndex = 14;
@@ -249,16 +229,40 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(121, 99);
+            this.numericUpDown2.Location = new System.Drawing.Point(95, 99);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(76, 20);
             this.numericUpDown2.TabIndex = 11;
+            // 
+            // Remover_button
+            // 
+            this.Remover_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remover_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_322_icon_icons_com_61532;
+            this.Remover_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Remover_button.Location = new System.Drawing.Point(19, 248);
+            this.Remover_button.Name = "Remover_button";
+            this.Remover_button.Size = new System.Drawing.Size(139, 30);
+            this.Remover_button.TabIndex = 21;
+            this.Remover_button.Text = "Remover Fila";
+            this.Remover_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Remover_button.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
+            this.button2.Location = new System.Drawing.Point(164, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 26);
+            this.button2.TabIndex = 15;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.button1.Location = new System.Drawing.Point(203, 96);
+            this.button1.Location = new System.Drawing.Point(177, 96);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 26);
             this.button1.TabIndex = 10;
@@ -270,7 +274,7 @@
             this.Buscar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
             this.Buscar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscar_button.Location = new System.Drawing.Point(243, 12);
+            this.Buscar_button.Location = new System.Drawing.Point(217, 12);
             this.Buscar_button.Name = "Buscar_button";
             this.Buscar_button.Size = new System.Drawing.Size(88, 29);
             this.Buscar_button.TabIndex = 7;

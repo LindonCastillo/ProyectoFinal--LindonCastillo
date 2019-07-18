@@ -32,6 +32,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.CompraId_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.Remover_button = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@
             this.Nuevo_button = new System.Windows.Forms.Button();
             this.Balance_textBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.CompraId_numericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pago_numericUpDown)).BeginInit();
@@ -74,7 +74,7 @@
             // 
             this.CompraId_numericUpDown.Location = new System.Drawing.Point(97, 103);
             this.CompraId_numericUpDown.Name = "CompraId_numericUpDown";
-            this.CompraId_numericUpDown.Size = new System.Drawing.Size(95, 20);
+            this.CompraId_numericUpDown.Size = new System.Drawing.Size(99, 20);
             this.CompraId_numericUpDown.TabIndex = 25;
             // 
             // panel1
@@ -94,11 +94,32 @@
             this.panel1.Size = new System.Drawing.Size(455, 286);
             this.panel1.TabIndex = 31;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Efectivo",
+            "Cheque"});
+            this.comboBox1.Location = new System.Drawing.Point(110, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(109, 21);
+            this.comboBox1.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(17, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 16);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Tipo de Pago";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(203, 254);
+            this.label8.Location = new System.Drawing.Point(201, 254);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 21);
             this.label8.TabIndex = 23;
@@ -106,7 +127,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(299, 255);
+            this.textBox3.Location = new System.Drawing.Point(299, 254);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(142, 20);
             this.textBox3.TabIndex = 22;
@@ -116,9 +137,9 @@
             this.Remover_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remover_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_322_icon_icons_com_61532;
             this.Remover_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Remover_button.Location = new System.Drawing.Point(19, 248);
+            this.Remover_button.Location = new System.Drawing.Point(14, 248);
             this.Remover_button.Name = "Remover_button";
-            this.Remover_button.Size = new System.Drawing.Size(139, 30);
+            this.Remover_button.Size = new System.Drawing.Size(132, 30);
             this.Remover_button.TabIndex = 21;
             this.Remover_button.Text = "Remover Fila";
             this.Remover_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,7 +148,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(383, 4);
+            this.button3.Location = new System.Drawing.Point(390, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(33, 30);
             this.button3.TabIndex = 20;
@@ -138,7 +159,7 @@
             // 
             this.Pago_numericUpDown.Location = new System.Drawing.Point(278, 12);
             this.Pago_numericUpDown.Name = "Pago_numericUpDown";
-            this.Pago_numericUpDown.Size = new System.Drawing.Size(91, 20);
+            this.Pago_numericUpDown.Size = new System.Drawing.Size(106, 20);
             this.Pago_numericUpDown.TabIndex = 17;
             // 
             // label7
@@ -159,14 +180,14 @@
             this.Detalle_dataGridView.Location = new System.Drawing.Point(14, 41);
             this.Detalle_dataGridView.Name = "Detalle_dataGridView";
             this.Detalle_dataGridView.ReadOnly = true;
-            this.Detalle_dataGridView.Size = new System.Drawing.Size(385, 201);
+            this.Detalle_dataGridView.Size = new System.Drawing.Size(427, 201);
             this.Detalle_dataGridView.TabIndex = 0;
             // 
             // BuscarCompraId_button
             // 
             this.BuscarCompraId_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarCompraId_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.BuscarCompraId_button.Location = new System.Drawing.Point(198, 100);
+            this.BuscarCompraId_button.Location = new System.Drawing.Point(202, 100);
             this.BuscarCompraId_button.Name = "BuscarCompraId_button";
             this.BuscarCompraId_button.Size = new System.Drawing.Size(34, 26);
             this.BuscarCompraId_button.TabIndex = 23;
@@ -188,7 +209,7 @@
             this.Fecha_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Fecha_dateTimePicker.Location = new System.Drawing.Point(97, 66);
             this.Fecha_dateTimePicker.Name = "Fecha_dateTimePicker";
-            this.Fecha_dateTimePicker.Size = new System.Drawing.Size(290, 20);
+            this.Fecha_dateTimePicker.Size = new System.Drawing.Size(193, 20);
             this.Fecha_dateTimePicker.TabIndex = 29;
             // 
             // label2
@@ -205,7 +226,7 @@
             // 
             this.PagoId_numericUpDown.Location = new System.Drawing.Point(97, 25);
             this.PagoId_numericUpDown.Name = "PagoId_numericUpDown";
-            this.PagoId_numericUpDown.Size = new System.Drawing.Size(188, 20);
+            this.PagoId_numericUpDown.Size = new System.Drawing.Size(99, 20);
             this.PagoId_numericUpDown.TabIndex = 22;
             // 
             // label1
@@ -223,7 +244,7 @@
             this.Buscar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
             this.Buscar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscar_button.Location = new System.Drawing.Point(299, 18);
+            this.Buscar_button.Location = new System.Drawing.Point(202, 18);
             this.Buscar_button.Name = "Buscar_button";
             this.Buscar_button.Size = new System.Drawing.Size(88, 29);
             this.Buscar_button.TabIndex = 20;
@@ -273,48 +294,27 @@
             // Balance_textBox
             // 
             this.Balance_textBox.BackColor = System.Drawing.Color.White;
-            this.Balance_textBox.Location = new System.Drawing.Point(296, 102);
+            this.Balance_textBox.Location = new System.Drawing.Point(291, 100);
             this.Balance_textBox.Name = "Balance_textBox";
             this.Balance_textBox.ReadOnly = true;
-            this.Balance_textBox.Size = new System.Drawing.Size(91, 20);
+            this.Balance_textBox.Size = new System.Drawing.Size(106, 20);
             this.Balance_textBox.TabIndex = 32;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(238, 107);
+            this.label5.Location = new System.Drawing.Point(238, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 33;
             this.label5.Text = "Balance";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 16);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Tipo de Pago";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Efectivo",
-            "Cheque"});
-            this.comboBox1.Location = new System.Drawing.Point(110, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(109, 21);
-            this.comboBox1.TabIndex = 25;
-            // 
             // rPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 495);
+            this.ClientSize = new System.Drawing.Size(477, 495);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Balance_textBox);
             this.Controls.Add(this.label3);
