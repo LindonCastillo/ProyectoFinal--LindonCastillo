@@ -115,7 +115,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 257);
+            this.label5.Location = new System.Drawing.Point(12, 251);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 16);
             this.label5.TabIndex = 13;
@@ -125,7 +125,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 225);
+            this.label6.Location = new System.Drawing.Point(12, 219);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 16);
             this.label6.TabIndex = 14;
@@ -135,7 +135,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 294);
+            this.label7.Location = new System.Drawing.Point(12, 288);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 16);
             this.label7.TabIndex = 15;
@@ -143,7 +143,7 @@
             // 
             // Direcccion_textBox
             // 
-            this.Direcccion_textBox.Location = new System.Drawing.Point(105, 255);
+            this.Direcccion_textBox.Location = new System.Drawing.Point(105, 249);
             this.Direcccion_textBox.Name = "Direcccion_textBox";
             this.Direcccion_textBox.Size = new System.Drawing.Size(173, 20);
             this.Direcccion_textBox.TabIndex = 18;
@@ -182,7 +182,7 @@
             this.Eliminar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
             this.Eliminar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminar_button.Location = new System.Drawing.Point(209, 332);
+            this.Eliminar_button.Location = new System.Drawing.Point(209, 326);
             this.Eliminar_button.Name = "Eliminar_button";
             this.Eliminar_button.Size = new System.Drawing.Size(93, 32);
             this.Eliminar_button.TabIndex = 5;
@@ -196,7 +196,7 @@
             this.Guardar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_273_icon_icons_com_61489;
             this.Guardar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardar_button.Location = new System.Drawing.Point(109, 332);
+            this.Guardar_button.Location = new System.Drawing.Point(109, 326);
             this.Guardar_button.Name = "Guardar_button";
             this.Guardar_button.Size = new System.Drawing.Size(94, 32);
             this.Guardar_button.TabIndex = 4;
@@ -210,7 +210,7 @@
             this.Nuevo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevo_button.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo_button.Image")));
             this.Nuevo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevo_button.Location = new System.Drawing.Point(15, 332);
+            this.Nuevo_button.Location = new System.Drawing.Point(15, 326);
             this.Nuevo_button.Name = "Nuevo_button";
             this.Nuevo_button.Size = new System.Drawing.Size(88, 32);
             this.Nuevo_button.TabIndex = 3;
@@ -222,7 +222,7 @@
             // Pesos_radioButton
             // 
             this.Pesos_radioButton.AutoSize = true;
-            this.Pesos_radioButton.Location = new System.Drawing.Point(120, 293);
+            this.Pesos_radioButton.Location = new System.Drawing.Point(120, 287);
             this.Pesos_radioButton.Name = "Pesos_radioButton";
             this.Pesos_radioButton.Size = new System.Drawing.Size(54, 17);
             this.Pesos_radioButton.TabIndex = 21;
@@ -233,7 +233,7 @@
             // Dolar_radioButton
             // 
             this.Dolar_radioButton.AutoSize = true;
-            this.Dolar_radioButton.Location = new System.Drawing.Point(196, 293);
+            this.Dolar_radioButton.Location = new System.Drawing.Point(196, 287);
             this.Dolar_radioButton.Name = "Dolar_radioButton";
             this.Dolar_radioButton.Size = new System.Drawing.Size(61, 17);
             this.Dolar_radioButton.TabIndex = 22;
@@ -248,7 +248,7 @@
             // Bienes_checkBox
             // 
             this.Bienes_checkBox.AutoSize = true;
-            this.Bienes_checkBox.Location = new System.Drawing.Point(120, 224);
+            this.Bienes_checkBox.Location = new System.Drawing.Point(120, 218);
             this.Bienes_checkBox.Name = "Bienes_checkBox";
             this.Bienes_checkBox.Size = new System.Drawing.Size(58, 17);
             this.Bienes_checkBox.TabIndex = 25;
@@ -258,7 +258,7 @@
             // Servicios_checkBox
             // 
             this.Servicios_checkBox.AutoSize = true;
-            this.Servicios_checkBox.Location = new System.Drawing.Point(196, 224);
+            this.Servicios_checkBox.Location = new System.Drawing.Point(196, 218);
             this.Servicios_checkBox.Name = "Servicios_checkBox";
             this.Servicios_checkBox.Size = new System.Drawing.Size(69, 17);
             this.Servicios_checkBox.TabIndex = 26;
@@ -287,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 373);
+            this.ClientSize = new System.Drawing.Size(314, 366);
             this.Controls.Add(this.Fecha_dateTimePicker);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Servicios_checkBox);
