@@ -28,30 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rProductos));
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ProductoId_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Nombre_textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.Cantidad_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.PrecioCompra_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.PrecioVenta_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.ITBIS_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Eliminar_button = new System.Windows.Forms.Button();
             this.Guardar_button = new System.Windows.Forms.Button();
             this.Buscar_button = new System.Windows.Forms.Button();
             this.Nuevo_button = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            this.Fecha_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoId_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cantidad_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioCompra_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioVenta_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ITBIS_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,19 +67,19 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "ProductoId";
             // 
-            // numericUpDown1
+            // ProductoId_numericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(120, 21);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown1.TabIndex = 4;
+            this.ProductoId_numericUpDown.Location = new System.Drawing.Point(120, 21);
+            this.ProductoId_numericUpDown.Name = "ProductoId_numericUpDown";
+            this.ProductoId_numericUpDown.Size = new System.Drawing.Size(69, 20);
+            this.ProductoId_numericUpDown.TabIndex = 4;
             // 
-            // textBox1
+            // Nombre_textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 20);
-            this.textBox1.TabIndex = 5;
+            this.Nombre_textBox.Location = new System.Drawing.Point(120, 60);
+            this.Nombre_textBox.Name = "Nombre_textBox";
+            this.Nombre_textBox.Size = new System.Drawing.Size(173, 20);
+            this.Nombre_textBox.TabIndex = 5;
             // 
             // label2
             // 
@@ -128,33 +131,48 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "ITBIS";
             // 
-            // numericUpDown2
+            // Cantidad_numericUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(120, 135);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(173, 20);
-            this.numericUpDown2.TabIndex = 11;
+            this.Cantidad_numericUpDown.Location = new System.Drawing.Point(120, 135);
+            this.Cantidad_numericUpDown.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.Cantidad_numericUpDown.Name = "Cantidad_numericUpDown";
+            this.Cantidad_numericUpDown.Size = new System.Drawing.Size(173, 20);
+            this.Cantidad_numericUpDown.TabIndex = 11;
             // 
-            // numericUpDown3
+            // PrecioCompra_numericUpDown
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(120, 174);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(173, 20);
-            this.numericUpDown3.TabIndex = 12;
+            this.PrecioCompra_numericUpDown.Location = new System.Drawing.Point(120, 174);
+            this.PrecioCompra_numericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.PrecioCompra_numericUpDown.Name = "PrecioCompra_numericUpDown";
+            this.PrecioCompra_numericUpDown.Size = new System.Drawing.Size(173, 20);
+            this.PrecioCompra_numericUpDown.TabIndex = 12;
             // 
-            // numericUpDown4
+            // PrecioVenta_numericUpDown
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(120, 217);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(173, 20);
-            this.numericUpDown4.TabIndex = 13;
+            this.PrecioVenta_numericUpDown.Location = new System.Drawing.Point(120, 217);
+            this.PrecioVenta_numericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.PrecioVenta_numericUpDown.Name = "PrecioVenta_numericUpDown";
+            this.PrecioVenta_numericUpDown.Size = new System.Drawing.Size(173, 20);
+            this.PrecioVenta_numericUpDown.TabIndex = 13;
             // 
-            // numericUpDown5
+            // ITBIS_numericUpDown
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(120, 258);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(173, 20);
-            this.numericUpDown5.TabIndex = 14;
+            this.ITBIS_numericUpDown.Location = new System.Drawing.Point(120, 258);
+            this.ITBIS_numericUpDown.Name = "ITBIS_numericUpDown";
+            this.ITBIS_numericUpDown.Size = new System.Drawing.Size(173, 20);
+            this.ITBIS_numericUpDown.TabIndex = 14;
             // 
             // Eliminar_button
             // 
@@ -168,6 +186,7 @@
             this.Eliminar_button.Text = "Eliminar";
             this.Eliminar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminar_button.UseVisualStyleBackColor = true;
+            this.Eliminar_button.Click += new System.EventHandler(this.Eliminar_button_Click);
             // 
             // Guardar_button
             // 
@@ -181,6 +200,7 @@
             this.Guardar_button.Text = "Guardar";
             this.Guardar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardar_button.UseVisualStyleBackColor = true;
+            this.Guardar_button.Click += new System.EventHandler(this.Guardar_button_Click);
             // 
             // Buscar_button
             // 
@@ -194,6 +214,7 @@
             this.Buscar_button.Text = "Buscar";
             this.Buscar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscar_button.UseVisualStyleBackColor = true;
+            this.Buscar_button.Click += new System.EventHandler(this.Buscar_button_Click);
             // 
             // Nuevo_button
             // 
@@ -207,6 +228,7 @@
             this.Nuevo_button.Text = "Nuevo";
             this.Nuevo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevo_button.UseVisualStyleBackColor = true;
+            this.Nuevo_button.Click += new System.EventHandler(this.Nuevo_button_Click);
             // 
             // label7
             // 
@@ -218,32 +240,36 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Fecha";
             // 
-            // dateTimePicker1
+            // Fecha_dateTimePicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 96);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(173, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.Fecha_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Fecha_dateTimePicker.Location = new System.Drawing.Point(120, 96);
+            this.Fecha_dateTimePicker.Name = "Fecha_dateTimePicker";
+            this.Fecha_dateTimePicker.Size = new System.Drawing.Size(173, 20);
+            this.Fecha_dateTimePicker.TabIndex = 16;
+            // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
             // 
             // rProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 351);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Fecha_dateTimePicker);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown5);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.ITBIS_numericUpDown);
+            this.Controls.Add(this.PrecioVenta_numericUpDown);
+            this.Controls.Add(this.PrecioCompra_numericUpDown);
+            this.Controls.Add(this.Cantidad_numericUpDown);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.Nombre_textBox);
+            this.Controls.Add(this.ProductoId_numericUpDown);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Eliminar_button);
             this.Controls.Add(this.Guardar_button);
@@ -252,11 +278,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rProductos";
             this.Text = "Registro de Productos";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoId_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cantidad_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioCompra_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioVenta_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ITBIS_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,18 +296,19 @@
         private System.Windows.Forms.Button Guardar_button;
         private System.Windows.Forms.Button Eliminar_button;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown ProductoId_numericUpDown;
+        private System.Windows.Forms.TextBox Nombre_textBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown Cantidad_numericUpDown;
+        private System.Windows.Forms.NumericUpDown PrecioCompra_numericUpDown;
+        private System.Windows.Forms.NumericUpDown PrecioVenta_numericUpDown;
+        private System.Windows.Forms.NumericUpDown ITBIS_numericUpDown;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Fecha_dateTimePicker;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
     }
 }

@@ -83,11 +83,11 @@ namespace ProyectoCooasar.UI.Registros
         {
             Proveedores proveedores = new Proveedores();
             proveedores.ProveedorId = Convert.ToInt32(ProveedorId_numericUpDown.Value);
-            proveedores.Nombre = Nombre_textBox.Text;
+            proveedores.Nombre = Nombre_textBox.Text.Trim();
             proveedores.Fecha = Fecha_dateTimePicker.Value;
             proveedores.Telefono = Telefono_maskedTextBox.Text;
-            proveedores.RNC = RNC_textBox.Text;
-            proveedores.Direccion = Direcccion_textBox.Text;
+            proveedores.RNC = RNC_textBox.Text.Trim();
+            proveedores.Direccion = Direcccion_textBox.Text.Trim();
             if(Bienes_checkBox.Checked == true)
             {
                 proveedores.Tipo = "Bienes";
