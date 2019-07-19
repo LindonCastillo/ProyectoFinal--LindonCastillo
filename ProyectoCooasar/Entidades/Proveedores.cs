@@ -11,6 +11,7 @@ namespace Entidades
     {
         [Key]
         public int ProveedorId { get; set; }
+        public DateTime Fecha { get; set; }
         public string Nombre { get; set; }
         public string Telefono { get; set; }
         public string RNC { get; set; }
@@ -21,6 +22,7 @@ namespace Entidades
         public Proveedores()
         {
             ProveedorId = 0;
+            Fecha = DateTime.Now;
             Nombre = string.Empty;
             Telefono = string.Empty;
             RNC = string.Empty;

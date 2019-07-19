@@ -25,6 +25,7 @@ namespace ProyectoCooasar.UI.Registros
             ErrorProvider.Clear();
             ProveedorId_numericUpDown.Value = 0;
             Nombre_textBox.Text = string.Empty;
+            Fecha_dateTimePicker.Value = DateTime.Now;
             RNC_textBox.Text = string.Empty;
             Telefono_maskedTextBox.Text = string.Empty;
             Direcccion_textBox.Text = string.Empty;
@@ -82,7 +83,7 @@ namespace ProyectoCooasar.UI.Registros
         {
             Proveedores proveedores = new Proveedores();
             proveedores.ProveedorId = Convert.ToInt32(ProveedorId_numericUpDown.Value);
-            proveedores.Nombre = Nombre_textBox.Text;
+            proveedores.Fecha = Fecha_dateTimePicker.Value;
             proveedores.Telefono = Telefono_maskedTextBox.Text;
             proveedores.RNC = RNC_textBox.Text;
             proveedores.Direccion = Direcccion_textBox.Text;
@@ -117,6 +118,7 @@ namespace ProyectoCooasar.UI.Registros
         private void LlenarCampos(Proveedores Proveedor)
         {
             ProveedorId_numericUpDown.Value = Proveedor.ProveedorId;
+            Fecha_dateTimePicker.Value = Proveedor.Fecha;
             Nombre_textBox.Text = Proveedor.Nombre;
             Telefono_maskedTextBox.Text = Proveedor.Telefono;
             RNC_textBox.Text = Proveedor.RNC;
