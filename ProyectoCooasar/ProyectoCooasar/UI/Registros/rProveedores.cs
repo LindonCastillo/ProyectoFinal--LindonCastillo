@@ -201,6 +201,7 @@ namespace ProyectoCooasar.UI.Registros
                 }
 
                 paso = repositorio.Modificar(proveedores);
+                Limpiar();
                 MessageBox.Show("Se modifico con Exito!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

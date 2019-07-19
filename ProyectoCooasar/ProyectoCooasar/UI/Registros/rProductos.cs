@@ -23,6 +23,7 @@ namespace ProyectoCooasar.UI.Registros
         {
             ErrorProvider.Clear();
             ProductoId_numericUpDown.Value = 0;
+            Nombre_textBox.Text = string.Empty;
             Fecha_dateTimePicker.Value = DateTime.Now;
             Cantidad_numericUpDown.Value = 0;
             PrecioCompra_numericUpDown.Value = 0;
@@ -46,7 +47,7 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
-            if(PrecioCompra_numericUpDown.Value < PrecioVenta_numericUpDown.Value)
+            if(PrecioVenta_numericUpDown.Value <= PrecioCompra_numericUpDown.Value)
             {
                 ErrorProvider.SetError(PrecioVenta_numericUpDown, "El precio de venta tienen que ser mayor al de compra");
                 paso = false;
@@ -134,6 +135,7 @@ namespace ProyectoCooasar.UI.Registros
                 }
 
                 paso = repositorio.Modificar(Producto);
+                Limpiar();
                 MessageBox.Show("Se modifico con Exito!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

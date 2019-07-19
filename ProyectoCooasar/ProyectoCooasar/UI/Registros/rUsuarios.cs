@@ -133,6 +133,7 @@ namespace ProyectoCooasar.UI.Registros
                 }
 
                 paso = repositorio.Modificar(Usuario);
+                Limpiar();
                 MessageBox.Show("Se modifico con Exito!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
