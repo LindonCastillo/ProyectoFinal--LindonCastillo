@@ -178,11 +178,11 @@ namespace ProyectoCooasar.UI.Registros
                 if (productos != null)
                 {
                     LlenarCampos(productos);
-                    MessageBox.Show("Proveedor Encontrado!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Producto Encontrado!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Proveedor No Encontrado!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Producto No Encontrado!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
