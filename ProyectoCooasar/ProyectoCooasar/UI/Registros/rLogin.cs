@@ -58,7 +58,7 @@ namespace ProyectoCooasar.UI.Registros
         {
             Dispose();
         }
-
+         
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
