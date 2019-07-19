@@ -83,6 +83,7 @@ namespace ProyectoCooasar.UI.Registros
         {
             Proveedores proveedores = new Proveedores();
             proveedores.ProveedorId = Convert.ToInt32(ProveedorId_numericUpDown.Value);
+            proveedores.Nombre = Nombre_textBox.Text;
             proveedores.Fecha = Fecha_dateTimePicker.Value;
             proveedores.Telefono = Telefono_maskedTextBox.Text;
             proveedores.RNC = RNC_textBox.Text;

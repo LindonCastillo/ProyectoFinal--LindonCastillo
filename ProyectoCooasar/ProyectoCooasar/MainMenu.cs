@@ -55,5 +55,11 @@ namespace ProyectoCooasar
             u.Show();
 
         }
+
+        private void ProveedoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cProveedores u = new cProveedores();
+            u.Show();
+        }
     }
 }

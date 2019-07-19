@@ -56,6 +56,18 @@ namespace ProyectoCooasar.UI.Consultas
                     case 4://TipoMoneda
                         listaProveedores = repositorio.GetList(p => p.TipoMoneda.Contains(Criterio_textBox.Text));
                         break;
+
+                    case 5://Telefono
+                        listaProveedores = repositorio.GetList(p => p.Telefono.Contains(Criterio_textBox.Text));
+                        break;
+
+                    case 6://Direccion
+                        listaProveedores = repositorio.GetList(p => p.Direccion.Contains(Criterio_textBox.Text));
+                        break;
+
+                    case 7://RNC
+                        listaProveedores = repositorio.GetList(p => p.RNC.Contains(Criterio_textBox.Text));
+                        break;
                 }
 
             }
@@ -66,12 +78,12 @@ namespace ProyectoCooasar.UI.Consultas
 
             if (FiltroFecha_checkBox.Checked == true)
             {
-                listaProveedores = listaProveedores.Where(c => c.FechaIngreso.Date >= Desde_dateTimePicker.Value.Date && c.FechaIngreso.Date <= Hasta_dateTimePicker.Value.Date).ToList();
+                listaProveedores = listaProveedores.Where(c => c.Fecha.Date >= Desde_dateTimePicker.Value.Date && c.Fecha.Date <= Hasta_dateTimePicker.Value.Date).ToList();
             }
 
             Consulta_dataGridView.DataSource = null;
             Consulta_dataGridView.DataSource = listaProveedores;
         }
     }
-    }
+    
 }

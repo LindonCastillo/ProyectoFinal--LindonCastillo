@@ -61,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 100);
+            this.label2.Location = new System.Drawing.Point(12, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 10;
@@ -69,7 +69,7 @@
             // 
             // Nombre_textBox
             // 
-            this.Nombre_textBox.Location = new System.Drawing.Point(105, 98);
+            this.Nombre_textBox.Location = new System.Drawing.Point(105, 103);
             this.Nombre_textBox.Name = "Nombre_textBox";
             this.Nombre_textBox.Size = new System.Drawing.Size(173, 20);
             this.Nombre_textBox.TabIndex = 9;
@@ -95,7 +95,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 141);
+            this.label3.Location = new System.Drawing.Point(12, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 11;
@@ -105,7 +105,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 179);
+            this.label4.Location = new System.Drawing.Point(12, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 16);
             this.label4.TabIndex = 12;
@@ -115,7 +115,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 252);
+            this.label5.Location = new System.Drawing.Point(12, 257);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 16);
             this.label5.TabIndex = 13;
@@ -125,7 +125,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 220);
+            this.label6.Location = new System.Drawing.Point(12, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 16);
             this.label6.TabIndex = 14;
@@ -135,7 +135,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 289);
+            this.label7.Location = new System.Drawing.Point(12, 294);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 16);
             this.label7.TabIndex = 15;
@@ -143,14 +143,14 @@
             // 
             // Direcccion_textBox
             // 
-            this.Direcccion_textBox.Location = new System.Drawing.Point(105, 250);
+            this.Direcccion_textBox.Location = new System.Drawing.Point(105, 255);
             this.Direcccion_textBox.Name = "Direcccion_textBox";
             this.Direcccion_textBox.Size = new System.Drawing.Size(173, 20);
             this.Direcccion_textBox.TabIndex = 18;
             // 
             // Telefono_maskedTextBox
             // 
-            this.Telefono_maskedTextBox.Location = new System.Drawing.Point(105, 136);
+            this.Telefono_maskedTextBox.Location = new System.Drawing.Point(105, 141);
             this.Telefono_maskedTextBox.Mask = "000-000-0000";
             this.Telefono_maskedTextBox.Name = "Telefono_maskedTextBox";
             this.Telefono_maskedTextBox.Size = new System.Drawing.Size(173, 20);
@@ -158,7 +158,7 @@
             // 
             // RNC_textBox
             // 
-            this.RNC_textBox.Location = new System.Drawing.Point(105, 175);
+            this.RNC_textBox.Location = new System.Drawing.Point(105, 180);
             this.RNC_textBox.Name = "RNC_textBox";
             this.RNC_textBox.Size = new System.Drawing.Size(173, 20);
             this.RNC_textBox.TabIndex = 20;
@@ -182,7 +182,7 @@
             this.Eliminar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
             this.Eliminar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminar_button.Location = new System.Drawing.Point(209, 327);
+            this.Eliminar_button.Location = new System.Drawing.Point(209, 332);
             this.Eliminar_button.Name = "Eliminar_button";
             this.Eliminar_button.Size = new System.Drawing.Size(93, 32);
             this.Eliminar_button.TabIndex = 5;
@@ -196,7 +196,7 @@
             this.Guardar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_273_icon_icons_com_61489;
             this.Guardar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardar_button.Location = new System.Drawing.Point(109, 327);
+            this.Guardar_button.Location = new System.Drawing.Point(109, 332);
             this.Guardar_button.Name = "Guardar_button";
             this.Guardar_button.Size = new System.Drawing.Size(94, 32);
             this.Guardar_button.TabIndex = 4;
@@ -210,7 +210,7 @@
             this.Nuevo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevo_button.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo_button.Image")));
             this.Nuevo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevo_button.Location = new System.Drawing.Point(15, 327);
+            this.Nuevo_button.Location = new System.Drawing.Point(15, 332);
             this.Nuevo_button.Name = "Nuevo_button";
             this.Nuevo_button.Size = new System.Drawing.Size(88, 32);
             this.Nuevo_button.TabIndex = 3;
@@ -222,7 +222,7 @@
             // Pesos_radioButton
             // 
             this.Pesos_radioButton.AutoSize = true;
-            this.Pesos_radioButton.Location = new System.Drawing.Point(120, 288);
+            this.Pesos_radioButton.Location = new System.Drawing.Point(120, 293);
             this.Pesos_radioButton.Name = "Pesos_radioButton";
             this.Pesos_radioButton.Size = new System.Drawing.Size(54, 17);
             this.Pesos_radioButton.TabIndex = 21;
@@ -233,7 +233,7 @@
             // Dolar_radioButton
             // 
             this.Dolar_radioButton.AutoSize = true;
-            this.Dolar_radioButton.Location = new System.Drawing.Point(196, 288);
+            this.Dolar_radioButton.Location = new System.Drawing.Point(196, 293);
             this.Dolar_radioButton.Name = "Dolar_radioButton";
             this.Dolar_radioButton.Size = new System.Drawing.Size(61, 17);
             this.Dolar_radioButton.TabIndex = 22;
@@ -248,7 +248,7 @@
             // Bienes_checkBox
             // 
             this.Bienes_checkBox.AutoSize = true;
-            this.Bienes_checkBox.Location = new System.Drawing.Point(120, 219);
+            this.Bienes_checkBox.Location = new System.Drawing.Point(120, 224);
             this.Bienes_checkBox.Name = "Bienes_checkBox";
             this.Bienes_checkBox.Size = new System.Drawing.Size(58, 17);
             this.Bienes_checkBox.TabIndex = 25;
@@ -258,7 +258,7 @@
             // Servicios_checkBox
             // 
             this.Servicios_checkBox.AutoSize = true;
-            this.Servicios_checkBox.Location = new System.Drawing.Point(196, 219);
+            this.Servicios_checkBox.Location = new System.Drawing.Point(196, 224);
             this.Servicios_checkBox.Name = "Servicios_checkBox";
             this.Servicios_checkBox.Size = new System.Drawing.Size(69, 17);
             this.Servicios_checkBox.TabIndex = 26;

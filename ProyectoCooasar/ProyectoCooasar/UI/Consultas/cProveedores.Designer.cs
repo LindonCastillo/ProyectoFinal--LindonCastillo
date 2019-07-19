@@ -96,7 +96,10 @@
             "Id",
             "Nombre",
             "Tipo Proveedor",
-            "Tipo de Moneda"});
+            "Tipo de Moneda",
+            "Teléfono",
+            "Dirección",
+            "RNC"});
             this.Filtro_comboBox.Location = new System.Drawing.Point(351, 28);
             this.Filtro_comboBox.Name = "Filtro_comboBox";
             this.Filtro_comboBox.Size = new System.Drawing.Size(118, 23);
