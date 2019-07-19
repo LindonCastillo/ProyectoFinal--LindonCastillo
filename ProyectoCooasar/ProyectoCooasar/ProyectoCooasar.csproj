@@ -92,6 +92,12 @@
     <Compile Include="UI\Registros\rCompras.Designer.cs">
       <DependentUpon>rCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rLogin.Designer.cs">
+      <DependentUpon>rLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rCompras.resx">
       <DependentUpon>rCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rLogin.resx">
+      <DependentUpon>rLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rPagos.resx">
       <DependentUpon>rPagos.cs</DependentUpon>
@@ -240,6 +249,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cslogin_104358.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimazar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\res.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

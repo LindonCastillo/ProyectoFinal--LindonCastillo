@@ -59,6 +59,13 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
+            decimal Prueba = 0;
+            if (decimal.TryParse(Nombre_textBox.Text, out Prueba))
+            {
+                ErrorProvider.SetError(Nombre_textBox, "El campo Nombre no pueden ser números");
+                paso = false;
+            }
+
             return paso;
         }
 

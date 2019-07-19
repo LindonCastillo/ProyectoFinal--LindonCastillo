@@ -17,6 +17,8 @@ namespace ProyectoCooasar
         public MainMenu()
         {
             InitializeComponent();
+            rLogin l = new rLogin();
+            l.ShowDialog();
         }
 
         private void ProductosToolStripMenuItem_Click(object sender, EventArgs e)
