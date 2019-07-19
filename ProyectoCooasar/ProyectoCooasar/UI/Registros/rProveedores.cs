@@ -58,7 +58,7 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
-            if(!Telefono_maskedTextBox.Text.Length > 0)
+            if(string.IsNullOrWhiteSpace(Telefono_maskedTextBox.Text.Replace("-","")))
             {
                 ErrorProvider.SetError(Telefono_maskedTextBox, "El campo Telefono no puede estar vacío");
                 paso = false;
@@ -91,6 +91,11 @@ namespace ProyectoCooasar.UI.Registros
                 proveedores.Tipo = "Servicios";
             }
 
+            if(Bienes_checkBox.Checked == true && Servicios_checkBox.Checked == true)
+            {
+                proveedores.Tipo = "Bienes y Servicios";
+            }
+
             if(Pesos_radioButton.Checked == true)
             {
                 proveedores.TipoMoneda = "Pesos";
@@ -120,6 +125,12 @@ namespace ProyectoCooasar.UI.Registros
             {
                 Servicios_checkBox.Checked = true;
                 
+            }
+
+            if(Proveedor.Tipo == "Bienes y Servicios")
+            {
+                Bienes_checkBox.Checked = true;
+                Servicios_checkBox.Checked = true;
             }
 
             if (Proveedor.TipoMoneda == "Pesos")
