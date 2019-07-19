@@ -25,8 +25,13 @@ namespace ProyectoCooasar.UI.Registros
             ErrorProvider.Clear();
             ProveedorId_numericUpDown.Value = 0;
             Nombre_textBox.Text = string.Empty;
+            RNC_textBox.Text = string.Empty;
             Telefono_maskedTextBox.Text = string.Empty;
             Direcccion_textBox.Text = string.Empty;
+            Bienes_checkBox.Checked = false;
+            Servicios_checkBox.Checked = false;
+            Pesos_radioButton.Checked = false;
+            Dolar_radioButton.Checked = false;
         }
 
         private bool Validar()
@@ -188,7 +193,7 @@ namespace ProyectoCooasar.UI.Registros
             {
                 if (!ExiteEnLaBaseDeDatos())
                 {
-                    MessageBox.Show("No se puede Modificar un usuario que no existe", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se puede Modificar un proveedor que no existe", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
