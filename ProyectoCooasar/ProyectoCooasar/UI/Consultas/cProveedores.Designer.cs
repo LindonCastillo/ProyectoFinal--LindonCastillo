@@ -1,6 +1,6 @@
 ﻿namespace ProyectoCooasar.UI.Consultas
 {
-    partial class cUsuarios
+    partial class cProveedores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,51 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cUsuarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cProveedores));
+            this.Imprimir_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Criterio_textBox = new System.Windows.Forms.TextBox();
             this.Filtro_comboBox = new System.Windows.Forms.ComboBox();
+            this.Consultar_button = new System.Windows.Forms.Button();
             this.Consulta_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Hasta_dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Desde_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.FiltroFecha_checkBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.FiltroFecha_checkBox = new System.Windows.Forms.CheckBox();
-            this.Imprimir_button = new System.Windows.Forms.Button();
-            this.Consultar_button = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Desde_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Hasta_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.Consulta_dataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Imprimir_button
+            // 
+            this.Imprimir_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Imprimir_button.Image = global::ProyectoCooasar.Properties.Resources.Impresora;
+            this.Imprimir_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Imprimir_button.Location = new System.Drawing.Point(475, 341);
+            this.Imprimir_button.Name = "Imprimir_button";
+            this.Imprimir_button.Size = new System.Drawing.Size(112, 36);
+            this.Imprimir_button.TabIndex = 26;
+            this.Imprimir_button.Text = "Imprimir";
+            this.Imprimir_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Imprimir_button.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(347, 54);
+            this.label3.Location = new System.Drawing.Point(348, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 16);
-            this.label3.TabIndex = 12;
+            this.label3.TabIndex = 25;
             this.label3.Text = "Criterio";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(347, 9);
+            this.label2.Location = new System.Drawing.Point(348, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 16);
-            this.label2.TabIndex = 11;
+            this.label2.TabIndex = 24;
             this.label2.Text = "Filtro";
             // 
             // Criterio_textBox
             // 
             this.Criterio_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Criterio_textBox.Location = new System.Drawing.Point(350, 73);
+            this.Criterio_textBox.Location = new System.Drawing.Point(351, 73);
             this.Criterio_textBox.Name = "Criterio_textBox";
             this.Criterio_textBox.Size = new System.Drawing.Size(236, 22);
-            this.Criterio_textBox.TabIndex = 10;
+            this.Criterio_textBox.TabIndex = 23;
             // 
             // Filtro_comboBox
             // 
@@ -82,42 +95,60 @@
             "Todo",
             "Id",
             "Nombre",
-            "Usuario"});
-            this.Filtro_comboBox.Location = new System.Drawing.Point(350, 28);
+            "Tipo Proveedor",
+            "Tipo de Moneda"});
+            this.Filtro_comboBox.Location = new System.Drawing.Point(351, 28);
             this.Filtro_comboBox.Name = "Filtro_comboBox";
             this.Filtro_comboBox.Size = new System.Drawing.Size(118, 23);
-            this.Filtro_comboBox.TabIndex = 9;
+            this.Filtro_comboBox.TabIndex = 22;
+            // 
+            // Consultar_button
+            // 
+            this.Consultar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Consultar_button.Image = global::ProyectoCooasar.Properties.Resources.icono;
+            this.Consultar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Consultar_button.Location = new System.Drawing.Point(475, 18);
+            this.Consultar_button.Name = "Consultar_button";
+            this.Consultar_button.Size = new System.Drawing.Size(112, 41);
+            this.Consultar_button.TabIndex = 21;
+            this.Consultar_button.Text = "Consultar";
+            this.Consultar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Consultar_button.UseVisualStyleBackColor = true;
+            this.Consultar_button.Click += new System.EventHandler(this.Consultar_button_Click);
             // 
             // Consulta_dataGridView
             // 
             this.Consulta_dataGridView.AllowUserToAddRows = false;
             this.Consulta_dataGridView.AllowUserToDeleteRows = false;
             this.Consulta_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Consulta_dataGridView.Location = new System.Drawing.Point(15, 102);
+            this.Consulta_dataGridView.Location = new System.Drawing.Point(16, 102);
             this.Consulta_dataGridView.Name = "Consulta_dataGridView";
             this.Consulta_dataGridView.ReadOnly = true;
             this.Consulta_dataGridView.Size = new System.Drawing.Size(583, 233);
-            this.Consulta_dataGridView.TabIndex = 7;
+            this.Consulta_dataGridView.TabIndex = 20;
             // 
-            // Hasta_dateTimePicker
+            // panel1
             // 
-            this.Hasta_dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hasta_dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hasta_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Hasta_dateTimePicker.Location = new System.Drawing.Point(165, 53);
-            this.Hasta_dateTimePicker.Name = "Hasta_dateTimePicker";
-            this.Hasta_dateTimePicker.Size = new System.Drawing.Size(121, 21);
-            this.Hasta_dateTimePicker.TabIndex = 13;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.FiltroFecha_checkBox);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.Desde_dateTimePicker);
+            this.panel1.Controls.Add(this.Hasta_dateTimePicker);
+            this.panel1.Location = new System.Drawing.Point(26, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 84);
+            this.panel1.TabIndex = 27;
             // 
-            // Desde_dateTimePicker
+            // FiltroFecha_checkBox
             // 
-            this.Desde_dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Desde_dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Desde_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Desde_dateTimePicker.Location = new System.Drawing.Point(16, 53);
-            this.Desde_dateTimePicker.Name = "Desde_dateTimePicker";
-            this.Desde_dateTimePicker.Size = new System.Drawing.Size(121, 21);
-            this.Desde_dateTimePicker.TabIndex = 14;
+            this.FiltroFecha_checkBox.AutoSize = true;
+            this.FiltroFecha_checkBox.Location = new System.Drawing.Point(69, 10);
+            this.FiltroFecha_checkBox.Name = "FiltroFecha_checkBox";
+            this.FiltroFecha_checkBox.Size = new System.Drawing.Size(102, 17);
+            this.FiltroFecha_checkBox.TabIndex = 18;
+            this.FiltroFecha_checkBox.Text = "Filtrar por Fecha";
+            this.FiltroFecha_checkBox.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -139,62 +170,31 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Hasta";
             // 
-            // FiltroFecha_checkBox
+            // Desde_dateTimePicker
             // 
-            this.FiltroFecha_checkBox.AutoSize = true;
-            this.FiltroFecha_checkBox.Location = new System.Drawing.Point(69, 10);
-            this.FiltroFecha_checkBox.Name = "FiltroFecha_checkBox";
-            this.FiltroFecha_checkBox.Size = new System.Drawing.Size(102, 17);
-            this.FiltroFecha_checkBox.TabIndex = 18;
-            this.FiltroFecha_checkBox.Text = "Filtrar por Fecha";
-            this.FiltroFecha_checkBox.UseVisualStyleBackColor = true;
+            this.Desde_dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Desde_dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Desde_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Desde_dateTimePicker.Location = new System.Drawing.Point(16, 53);
+            this.Desde_dateTimePicker.Name = "Desde_dateTimePicker";
+            this.Desde_dateTimePicker.Size = new System.Drawing.Size(121, 21);
+            this.Desde_dateTimePicker.TabIndex = 14;
             // 
-            // Imprimir_button
+            // Hasta_dateTimePicker
             // 
-            this.Imprimir_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Imprimir_button.Image = global::ProyectoCooasar.Properties.Resources.Impresora;
-            this.Imprimir_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Imprimir_button.Location = new System.Drawing.Point(474, 341);
-            this.Imprimir_button.Name = "Imprimir_button";
-            this.Imprimir_button.Size = new System.Drawing.Size(112, 36);
-            this.Imprimir_button.TabIndex = 17;
-            this.Imprimir_button.Text = "Imprimir";
-            this.Imprimir_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Imprimir_button.UseVisualStyleBackColor = true;
-            this.Imprimir_button.Click += new System.EventHandler(this.Imprimir_button_Click);
+            this.Hasta_dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hasta_dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hasta_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Hasta_dateTimePicker.Location = new System.Drawing.Point(165, 53);
+            this.Hasta_dateTimePicker.Name = "Hasta_dateTimePicker";
+            this.Hasta_dateTimePicker.Size = new System.Drawing.Size(121, 21);
+            this.Hasta_dateTimePicker.TabIndex = 13;
             // 
-            // Consultar_button
-            // 
-            this.Consultar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Consultar_button.Image = global::ProyectoCooasar.Properties.Resources.icono;
-            this.Consultar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Consultar_button.Location = new System.Drawing.Point(474, 18);
-            this.Consultar_button.Name = "Consultar_button";
-            this.Consultar_button.Size = new System.Drawing.Size(112, 41);
-            this.Consultar_button.TabIndex = 8;
-            this.Consultar_button.Text = "Consultar";
-            this.Consultar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Consultar_button.UseVisualStyleBackColor = true;
-            this.Consultar_button.Click += new System.EventHandler(this.Consultar_button_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.FiltroFecha_checkBox);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.Desde_dateTimePicker);
-            this.panel1.Controls.Add(this.Hasta_dateTimePicker);
-            this.panel1.Location = new System.Drawing.Point(25, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 84);
-            this.panel1.TabIndex = 19;
-            // 
-            // cUsuarios
+            // cProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 389);
+            this.ClientSize = new System.Drawing.Size(612, 387);
             this.Controls.Add(this.Imprimir_button);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -204,8 +204,8 @@
             this.Controls.Add(this.Consulta_dataGridView);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "cUsuarios";
-            this.Text = "Consulta de Usuarios";
+            this.Name = "cProveedores";
+            this.Text = "Consulta de Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.Consulta_dataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -216,18 +216,18 @@
 
         #endregion
 
+        private System.Windows.Forms.Button Imprimir_button;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Criterio_textBox;
         private System.Windows.Forms.ComboBox Filtro_comboBox;
         private System.Windows.Forms.Button Consultar_button;
         private System.Windows.Forms.DataGridView Consulta_dataGridView;
-        private System.Windows.Forms.DateTimePicker Hasta_dateTimePicker;
-        private System.Windows.Forms.DateTimePicker Desde_dateTimePicker;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox FiltroFecha_checkBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Imprimir_button;
-        private System.Windows.Forms.CheckBox FiltroFecha_checkBox;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker Desde_dateTimePicker;
+        private System.Windows.Forms.DateTimePicker Hasta_dateTimePicker;
     }
 }
