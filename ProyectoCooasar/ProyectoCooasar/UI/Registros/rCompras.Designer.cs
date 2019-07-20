@@ -30,68 +30,73 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rCompras));
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.Proveedor_textBox = new System.Windows.Forms.TextBox();
+            this.CompraId_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Fecha_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Balance_textBox = new System.Windows.Forms.TextBox();
             this.Remover_button = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Agregar_button = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ProductoId_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.BuscarProducto_button = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Producto_textBox = new System.Windows.Forms.TextBox();
+            this.Detalle_dataGridView = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.ProveedorId_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.Buscar_button = new System.Windows.Forms.Button();
             this.Eliminar_button = new System.Windows.Forms.Button();
             this.Guardar_button = new System.Windows.Forms.Button();
             this.Nuevo_button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.Itbis_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.NFC_textBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.CompraId_numericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoId_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedorId_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Itbis_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 103);
+            this.label2.Location = new System.Drawing.Point(16, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "ProvedorId";
             // 
-            // textBox1
+            // Proveedor_textBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(286, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(126, 20);
-            this.textBox1.TabIndex = 10;
+            this.Proveedor_textBox.BackColor = System.Drawing.Color.White;
+            this.Proveedor_textBox.Location = new System.Drawing.Point(293, 104);
+            this.Proveedor_textBox.Name = "Proveedor_textBox";
+            this.Proveedor_textBox.ReadOnly = true;
+            this.Proveedor_textBox.Size = new System.Drawing.Size(132, 20);
+            this.Proveedor_textBox.TabIndex = 10;
             // 
-            // numericUpDown1
+            // CompraId_numericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(95, 21);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(116, 20);
-            this.numericUpDown1.TabIndex = 9;
+            this.CompraId_numericUpDown.Location = new System.Drawing.Point(99, 12);
+            this.CompraId_numericUpDown.Name = "CompraId_numericUpDown";
+            this.CompraId_numericUpDown.Size = new System.Drawing.Size(116, 20);
+            this.CompraId_numericUpDown.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Location = new System.Drawing.Point(16, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 8;
@@ -101,25 +106,25 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(38, 136);
+            this.label3.Location = new System.Drawing.Point(42, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 21);
             this.label3.TabIndex = 13;
             this.label3.Text = "Detalle de Compra";
             // 
-            // dateTimePicker1
+            // Fecha_dateTimePicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(95, 62);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.Fecha_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Fecha_dateTimePicker.Location = new System.Drawing.Point(99, 43);
+            this.Fecha_dateTimePicker.Name = "Fecha_dateTimePicker";
+            this.Fecha_dateTimePicker.Size = new System.Drawing.Size(210, 20);
+            this.Fecha_dateTimePicker.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 66);
+            this.label4.Location = new System.Drawing.Point(16, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 15;
@@ -129,16 +134,16 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.Balance_textBox);
             this.panel1.Controls.Add(this.Remover_button);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.Agregar_button);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.numericUpDown3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.ProductoId_numericUpDown);
+            this.panel1.Controls.Add(this.BuscarProducto_button);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(12, 151);
+            this.panel1.Controls.Add(this.Producto_textBox);
+            this.panel1.Controls.Add(this.Detalle_dataGridView);
+            this.panel1.Location = new System.Drawing.Point(16, 184);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 286);
             this.panel1.TabIndex = 16;
@@ -147,20 +152,20 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(203, 254);
+            this.label8.Location = new System.Drawing.Point(223, 255);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 21);
+            this.label8.Size = new System.Drawing.Size(70, 21);
             this.label8.TabIndex = 23;
-            this.label8.Text = "Total Bruto";
+            this.label8.Text = "Balance";
             // 
-            // textBox3
+            // Balance_textBox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(299, 255);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(142, 20);
-            this.textBox3.TabIndex = 22;
+            this.Balance_textBox.BackColor = System.Drawing.Color.White;
+            this.Balance_textBox.Location = new System.Drawing.Point(299, 255);
+            this.Balance_textBox.Name = "Balance_textBox";
+            this.Balance_textBox.ReadOnly = true;
+            this.Balance_textBox.Size = new System.Drawing.Size(142, 20);
+            this.Balance_textBox.TabIndex = 22;
             // 
             // Remover_button
             // 
@@ -175,43 +180,43 @@
             this.Remover_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Remover_button.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Agregar_button
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(405, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 30);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Agregar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Agregar_button.Location = new System.Drawing.Point(418, 8);
+            this.Agregar_button.Name = "Agregar_button";
+            this.Agregar_button.Size = new System.Drawing.Size(33, 30);
+            this.Agregar_button.TabIndex = 20;
+            this.Agregar_button.Text = "+";
+            this.Agregar_button.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(204, 19);
+            this.label6.Location = new System.Drawing.Point(204, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 16);
             this.label6.TabIndex = 19;
             this.label6.Text = "Producto";
             // 
-            // numericUpDown3
+            // ProductoId_numericUpDown
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(89, 17);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown3.TabIndex = 17;
+            this.ProductoId_numericUpDown.Location = new System.Drawing.Point(89, 17);
+            this.ProductoId_numericUpDown.Name = "ProductoId_numericUpDown";
+            this.ProductoId_numericUpDown.Size = new System.Drawing.Size(69, 20);
+            this.ProductoId_numericUpDown.TabIndex = 17;
             // 
-            // button2
+            // BuscarProducto_button
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.button2.Location = new System.Drawing.Point(164, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 26);
-            this.button2.TabIndex = 15;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.BuscarProducto_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarProducto_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
+            this.BuscarProducto_button.Location = new System.Drawing.Point(164, 11);
+            this.BuscarProducto_button.Name = "BuscarProducto_button";
+            this.BuscarProducto_button.Size = new System.Drawing.Size(34, 26);
+            this.BuscarProducto_button.TabIndex = 15;
+            this.BuscarProducto_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarProducto_button.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -223,46 +228,46 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "ProductoId";
             // 
-            // textBox2
+            // Producto_textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(267, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 16;
+            this.Producto_textBox.Location = new System.Drawing.Point(276, 16);
+            this.Producto_textBox.Name = "Producto_textBox";
+            this.Producto_textBox.Size = new System.Drawing.Size(132, 20);
+            this.Producto_textBox.TabIndex = 16;
             // 
-            // dataGridView1
+            // Detalle_dataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(437, 191);
-            this.dataGridView1.TabIndex = 0;
+            this.Detalle_dataGridView.AllowUserToAddRows = false;
+            this.Detalle_dataGridView.AllowUserToDeleteRows = false;
+            this.Detalle_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Detalle_dataGridView.Location = new System.Drawing.Point(14, 44);
+            this.Detalle_dataGridView.Name = "Detalle_dataGridView";
+            this.Detalle_dataGridView.ReadOnly = true;
+            this.Detalle_dataGridView.Size = new System.Drawing.Size(437, 198);
+            this.Detalle_dataGridView.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(217, 103);
+            this.label5.Location = new System.Drawing.Point(221, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 16);
             this.label5.TabIndex = 14;
             this.label5.Text = "Proveedor";
             // 
-            // numericUpDown2
+            // ProveedorId_numericUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(95, 99);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(76, 20);
-            this.numericUpDown2.TabIndex = 11;
+            this.ProveedorId_numericUpDown.Location = new System.Drawing.Point(99, 105);
+            this.ProveedorId_numericUpDown.Name = "ProveedorId_numericUpDown";
+            this.ProveedorId_numericUpDown.Size = new System.Drawing.Size(76, 20);
+            this.ProveedorId_numericUpDown.TabIndex = 11;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.button1.Location = new System.Drawing.Point(177, 96);
+            this.button1.Location = new System.Drawing.Point(181, 102);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 26);
             this.button1.TabIndex = 10;
@@ -274,7 +279,7 @@
             this.Buscar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
             this.Buscar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscar_button.Location = new System.Drawing.Point(217, 12);
+            this.Buscar_button.Location = new System.Drawing.Point(221, 3);
             this.Buscar_button.Name = "Buscar_button";
             this.Buscar_button.Size = new System.Drawing.Size(88, 29);
             this.Buscar_button.TabIndex = 7;
@@ -287,7 +292,7 @@
             this.Eliminar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
             this.Eliminar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminar_button.Location = new System.Drawing.Point(312, 443);
+            this.Eliminar_button.Location = new System.Drawing.Point(316, 476);
             this.Eliminar_button.Name = "Eliminar_button";
             this.Eliminar_button.Size = new System.Drawing.Size(94, 34);
             this.Eliminar_button.TabIndex = 5;
@@ -300,7 +305,7 @@
             this.Guardar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_273_icon_icons_com_61489;
             this.Guardar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardar_button.Location = new System.Drawing.Point(190, 443);
+            this.Guardar_button.Location = new System.Drawing.Point(194, 476);
             this.Guardar_button.Name = "Guardar_button";
             this.Guardar_button.Size = new System.Drawing.Size(95, 34);
             this.Guardar_button.TabIndex = 4;
@@ -313,7 +318,7 @@
             this.Nuevo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevo_button.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo_button.Image")));
             this.Nuevo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevo_button.Location = new System.Drawing.Point(76, 443);
+            this.Nuevo_button.Location = new System.Drawing.Point(80, 476);
             this.Nuevo_button.Name = "Nuevo_button";
             this.Nuevo_button.Size = new System.Drawing.Size(89, 34);
             this.Nuevo_button.TabIndex = 3;
@@ -321,21 +326,61 @@
             this.Nuevo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevo_button.UseVisualStyleBackColor = true;
             // 
+            // Itbis_numericUpDown
+            // 
+            this.Itbis_numericUpDown.Location = new System.Drawing.Point(99, 73);
+            this.Itbis_numericUpDown.Name = "Itbis_numericUpDown";
+            this.Itbis_numericUpDown.Size = new System.Drawing.Size(76, 20);
+            this.Itbis_numericUpDown.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(16, 77);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 16);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Itbis";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(16, 143);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(32, 16);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "NCF";
+            // 
+            // NFC_textBox
+            // 
+            this.NFC_textBox.BackColor = System.Drawing.Color.White;
+            this.NFC_textBox.Location = new System.Drawing.Point(99, 136);
+            this.NFC_textBox.Name = "NFC_textBox";
+            this.NFC_textBox.ReadOnly = true;
+            this.NFC_textBox.Size = new System.Drawing.Size(116, 20);
+            this.NFC_textBox.TabIndex = 19;
+            // 
             // rCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 486);
+            this.ClientSize = new System.Drawing.Size(492, 520);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.NFC_textBox);
+            this.Controls.Add(this.Itbis_numericUpDown);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.ProveedorId_numericUpDown);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Fecha_dateTimePicker);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.Proveedor_textBox);
+            this.Controls.Add(this.CompraId_numericUpDown);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Buscar_button);
             this.Controls.Add(this.Eliminar_button);
@@ -344,12 +389,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rCompras";
             this.Text = "Registro de Compras";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CompraId_numericUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoId_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedorId_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Itbis_numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,26 +407,30 @@
         private System.Windows.Forms.Button Guardar_button;
         private System.Windows.Forms.Button Nuevo_button;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox Proveedor_textBox;
+        private System.Windows.Forms.NumericUpDown CompraId_numericUpDown;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Buscar_button;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Fecha_dateTimePicker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown ProveedorId_numericUpDown;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Balance_textBox;
         private System.Windows.Forms.Button Remover_button;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Agregar_button;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.NumericUpDown ProductoId_numericUpDown;
+        private System.Windows.Forms.Button BuscarProducto_button;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox Producto_textBox;
+        private System.Windows.Forms.DataGridView Detalle_dataGridView;
+        private System.Windows.Forms.NumericUpDown Itbis_numericUpDown;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox NFC_textBox;
     }
 }
