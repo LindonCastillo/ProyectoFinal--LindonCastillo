@@ -14,6 +14,8 @@ namespace ProyectoCooasar.DAL
         public DbSet<Usuarios> Usuario { get; set; }
         public DbSet<Proveedores> Proveedor { get; set; }
         public DbSet<Productos> Producto { get; set; }
+        public DbSet<Compras> Compra { get; set; }
+
         public Contexto() : base("ConStr")
         { }
     }

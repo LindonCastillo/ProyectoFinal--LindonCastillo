@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rCompras));
             this.label2 = new System.Windows.Forms.Label();
             this.Proveedor_textBox = new System.Windows.Forms.TextBox();
@@ -56,14 +57,17 @@
             this.Nuevo_button = new System.Windows.Forms.Button();
             this.Itbis_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.NFC_textBox = new System.Windows.Forms.TextBox();
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Cantidad_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CompraId_numericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoId_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProveedorId_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Itbis_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cantidad_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -106,7 +110,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 169);
+            this.label3.Location = new System.Drawing.Point(42, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 21);
             this.label3.TabIndex = 13;
@@ -133,6 +137,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.Cantidad_numericUpDown);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.Balance_textBox);
             this.panel1.Controls.Add(this.Remover_button);
@@ -143,7 +149,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.Producto_textBox);
             this.panel1.Controls.Add(this.Detalle_dataGridView);
-            this.panel1.Location = new System.Drawing.Point(16, 184);
+            this.panel1.Location = new System.Drawing.Point(16, 157);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 286);
             this.panel1.TabIndex = 16;
@@ -240,10 +246,10 @@
             this.Detalle_dataGridView.AllowUserToAddRows = false;
             this.Detalle_dataGridView.AllowUserToDeleteRows = false;
             this.Detalle_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Detalle_dataGridView.Location = new System.Drawing.Point(14, 44);
+            this.Detalle_dataGridView.Location = new System.Drawing.Point(14, 68);
             this.Detalle_dataGridView.Name = "Detalle_dataGridView";
             this.Detalle_dataGridView.ReadOnly = true;
-            this.Detalle_dataGridView.Size = new System.Drawing.Size(437, 198);
+            this.Detalle_dataGridView.Size = new System.Drawing.Size(437, 174);
             this.Detalle_dataGridView.TabIndex = 0;
             // 
             // label5
@@ -292,7 +298,7 @@
             this.Eliminar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
             this.Eliminar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminar_button.Location = new System.Drawing.Point(316, 476);
+            this.Eliminar_button.Location = new System.Drawing.Point(316, 449);
             this.Eliminar_button.Name = "Eliminar_button";
             this.Eliminar_button.Size = new System.Drawing.Size(94, 34);
             this.Eliminar_button.TabIndex = 5;
@@ -305,7 +311,7 @@
             this.Guardar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_273_icon_icons_com_61489;
             this.Guardar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardar_button.Location = new System.Drawing.Point(194, 476);
+            this.Guardar_button.Location = new System.Drawing.Point(194, 449);
             this.Guardar_button.Name = "Guardar_button";
             this.Guardar_button.Size = new System.Drawing.Size(95, 34);
             this.Guardar_button.TabIndex = 4;
@@ -318,7 +324,7 @@
             this.Nuevo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevo_button.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo_button.Image")));
             this.Nuevo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevo_button.Location = new System.Drawing.Point(80, 476);
+            this.Nuevo_button.Location = new System.Drawing.Point(80, 449);
             this.Nuevo_button.Name = "Nuevo_button";
             this.Nuevo_button.Size = new System.Drawing.Size(89, 34);
             this.Nuevo_button.TabIndex = 3;
@@ -343,32 +349,32 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Itbis";
             // 
-            // label10
+            // ErrorProvider
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(16, 143);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 16);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "NCF";
+            this.ErrorProvider.ContainerControl = this;
             // 
-            // NFC_textBox
+            // Cantidad_numericUpDown
             // 
-            this.NFC_textBox.BackColor = System.Drawing.Color.White;
-            this.NFC_textBox.Location = new System.Drawing.Point(99, 136);
-            this.NFC_textBox.Name = "NFC_textBox";
-            this.NFC_textBox.ReadOnly = true;
-            this.NFC_textBox.Size = new System.Drawing.Size(116, 20);
-            this.NFC_textBox.TabIndex = 19;
+            this.Cantidad_numericUpDown.Location = new System.Drawing.Point(89, 42);
+            this.Cantidad_numericUpDown.Name = "Cantidad_numericUpDown";
+            this.Cantidad_numericUpDown.Size = new System.Drawing.Size(109, 20);
+            this.Cantidad_numericUpDown.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 46);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 16);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Cantidad";
             // 
             // rCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 520);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.NFC_textBox);
+            this.ClientSize = new System.Drawing.Size(491, 489);
             this.Controls.Add(this.Itbis_numericUpDown);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
@@ -396,6 +402,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProveedorId_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Itbis_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cantidad_numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,7 +438,8 @@
         private System.Windows.Forms.DataGridView Detalle_dataGridView;
         private System.Windows.Forms.NumericUpDown Itbis_numericUpDown;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox NFC_textBox;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.NumericUpDown Cantidad_numericUpDown;
+        private System.Windows.Forms.Label label11;
     }
 }
