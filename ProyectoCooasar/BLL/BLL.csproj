@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ComprasBLL.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="PagosBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorioBase.cs" />
   </ItemGroup>

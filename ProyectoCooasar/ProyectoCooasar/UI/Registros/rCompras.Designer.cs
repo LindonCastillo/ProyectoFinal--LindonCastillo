@@ -115,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 142);
+            this.label3.Location = new System.Drawing.Point(41, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 21);
             this.label3.TabIndex = 13;
@@ -154,7 +154,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.Producto_textBox);
             this.panel1.Controls.Add(this.Detalle_dataGridView);
-            this.panel1.Location = new System.Drawing.Point(16, 157);
+            this.panel1.Location = new System.Drawing.Point(15, 149);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 286);
             this.panel1.TabIndex = 16;
@@ -342,7 +342,7 @@
             this.Eliminar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
             this.Eliminar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminar_button.Location = new System.Drawing.Point(316, 449);
+            this.Eliminar_button.Location = new System.Drawing.Point(315, 441);
             this.Eliminar_button.Name = "Eliminar_button";
             this.Eliminar_button.Size = new System.Drawing.Size(94, 34);
             this.Eliminar_button.TabIndex = 5;
@@ -356,7 +356,7 @@
             this.Guardar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_273_icon_icons_com_61489;
             this.Guardar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardar_button.Location = new System.Drawing.Point(194, 449);
+            this.Guardar_button.Location = new System.Drawing.Point(193, 441);
             this.Guardar_button.Name = "Guardar_button";
             this.Guardar_button.Size = new System.Drawing.Size(95, 34);
             this.Guardar_button.TabIndex = 4;
@@ -370,7 +370,7 @@
             this.Nuevo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevo_button.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo_button.Image")));
             this.Nuevo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevo_button.Location = new System.Drawing.Point(80, 449);
+            this.Nuevo_button.Location = new System.Drawing.Point(79, 441);
             this.Nuevo_button.Name = "Nuevo_button";
             this.Nuevo_button.Size = new System.Drawing.Size(89, 34);
             this.Nuevo_button.TabIndex = 3;
