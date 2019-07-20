@@ -185,6 +185,7 @@
             this.Remover_button.Text = "Remover Fila";
             this.Remover_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Remover_button.UseVisualStyleBackColor = true;
+            this.Remover_button.Click += new System.EventHandler(this.Remover_button_Click);
             // 
             // Agregar_button
             // 
@@ -195,6 +196,7 @@
             this.Agregar_button.TabIndex = 20;
             this.Agregar_button.Text = "+";
             this.Agregar_button.UseVisualStyleBackColor = true;
+            this.Agregar_button.Click += new System.EventHandler(this.Agregar_button_Click);
             // 
             // label6
             // 
@@ -223,6 +225,7 @@
             this.BuscarProducto_button.TabIndex = 15;
             this.BuscarProducto_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarProducto_button.UseVisualStyleBackColor = true;
+            this.BuscarProducto_button.Click += new System.EventHandler(this.BuscarProducto_button_Click);
             // 
             // label7
             // 
@@ -292,6 +295,7 @@
             this.Buscar_button.Text = "Buscar";
             this.Buscar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscar_button.UseVisualStyleBackColor = true;
+            this.Buscar_button.Click += new System.EventHandler(this.Buscar_button_Click);
             // 
             // Eliminar_button
             // 
@@ -305,6 +309,7 @@
             this.Eliminar_button.Text = "Eliminar";
             this.Eliminar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminar_button.UseVisualStyleBackColor = true;
+            this.Eliminar_button.Click += new System.EventHandler(this.Eliminar_button_Click);
             // 
             // Guardar_button
             // 
@@ -318,6 +323,7 @@
             this.Guardar_button.Text = "Guardar";
             this.Guardar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardar_button.UseVisualStyleBackColor = true;
+            this.Guardar_button.Click += new System.EventHandler(this.Guardar_button_Click);
             // 
             // Nuevo_button
             // 
@@ -331,6 +337,7 @@
             this.Nuevo_button.Text = "Nuevo";
             this.Nuevo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevo_button.UseVisualStyleBackColor = true;
+            this.Nuevo_button.Click += new System.EventHandler(this.Nuevo_button_Click);
             // 
             // Itbis_numericUpDown
             // 

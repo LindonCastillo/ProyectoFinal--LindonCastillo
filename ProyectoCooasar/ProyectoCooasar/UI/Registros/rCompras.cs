@@ -13,7 +13,7 @@ namespace ProyectoCooasar.UI.Registros
 {
     public partial class rCompras : Form
     {
-        public List<ComprasDetalle> Detalles { get; set; }
+        public List<ComprasDetalle> Detalle { get; set; }
         public rCompras()
         {
             InitializeComponent();
@@ -28,44 +28,28 @@ namespace ProyectoCooasar.UI.Registros
             Itbis_numericUpDown.Value = 0;
             ProveedorId_numericUpDown.Value = 0;
             Proveedor_textBox.Text = string.Empty;
-            NFC_textBox.Text;
 
+            this.Detalle = new List<ComprasDetalle>();
+            CargarGrid();
         }
 
         private bool Validar()
         {
             ErrorProvider.Clear();
             bool paso = true;
-            if (PrecioVenta_numericUpDown.Value == 0)
+            if (string.IsNullOrEmpty(Proveedor_textBox.Text))
             {
-                ErrorProvider.SetError(PrecioVenta_numericUpDown, "El valor de este campo no puede ser cero");
+                ErrorProvider.SetError(Proveedor_textBox, "El campo Proveedor no puede estar vacío");
                 paso = false;
             }
 
-            if (PrecioCompra_numericUpDown.Value == 0)
+            if (string.IsNullOrEmpty(Producto_textBox.Text))
             {
-                ErrorProvider.SetError(PrecioCompra_numericUpDown, "El valor de este campo no puede ser cero");
+                ErrorProvider.SetError(Producto_textBox, "El campo Producto no puede estar vacío");
                 paso = false;
             }
 
-            if (PrecioVenta_numericUpDown.Value <= PrecioCompra_numericUpDown.Value)
-            {
-                ErrorProvider.SetError(PrecioVenta_numericUpDown, "El precio de venta tienen que ser mayor al de compra");
-                paso = false;
-            }
 
-            if (string.IsNullOrWhiteSpace(Nombre_textBox.Text))
-            {
-                ErrorProvider.SetError(Nombre_textBox, "El campo Nombre no puede estar vacío");
-                paso = false;
-            }
-
-            decimal Prueba = 0;
-            if (decimal.TryParse(Nombre_textBox.Text, out Prueba))
-            {
-                ErrorProvider.SetError(Nombre_textBox, "El campo Nombre no pueden ser números");
-                paso = false;
-            }
 
             return paso;
         }
@@ -100,6 +84,61 @@ namespace ProyectoCooasar.UI.Registros
             Productos Producto = repositorio.Buscar((int)ProductoId_numericUpDown.Value);
             return (Producto != null);
         }
+        private void CargarGrid()
+        {
+            Detalle_dataGridView.DataSource = null;
+            Detalle_dataGridView.DataSource = this.Detalle;
+        }
 
+        public decimal CalculoMonto()
+        {
+            decimal monto = 0;
+
+            foreach (var item in Detalle)
+            {
+                monto += item.Subtotal;
+            }
+
+            return monto;
+        }
+
+        private void Nuevo_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Guardar_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Eliminar_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Buscar_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BuscarProducto_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Agregar_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Remover_button_Click(object sender, EventArgs e)
+        {
+            if (Detalle_dataGridView.Rows.Count > 0 && Detalle_dataGridView.CurrentRow != null)
+            {
+                Detalle.RemoveAt(Detalle_dataGridView.CurrentRow.Index);
+                CargarGrid();
+                Balance_textBox.Text = CalculoMonto().ToString();
+            }
     }
 }
