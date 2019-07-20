@@ -47,6 +47,18 @@ namespace BLL
 
                 }
 
+                foreach (var item in compras.DetalleCompra)
+                {
+                    if (item.Id == 0)
+                    {
+                        db.Entry(item).State = EntityState.Added;
+                    }
+                    else
+                    {
+                        db.Entry(item).State = EntityState.Modified;
+                    }
+                }
+
                 db.Entry(compras).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
 

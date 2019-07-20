@@ -40,6 +40,25 @@ namespace ProyectoCooasar.UI.Registros
             CargarGrid();
         }
 
+        private bool ValidarProveedor()
+        {
+            bool existe;
+            Proveedores proveedores = new Proveedores();
+            Contexto db = new Contexto();
+            proveedores = db.Proveedor.Find((int)ProveedorId_numericUpDown.Value);
+            
+            if(proveedores != null)
+            {
+                existe = true;
+            }
+            else
+            {
+                existe = false;
+            }
+
+            return existe;
+        }
+
         private bool Validar()
         {
             ErrorProvider.Clear();
@@ -47,6 +66,19 @@ namespace ProyectoCooasar.UI.Registros
             if (ProveedorId_numericUpDown.Value == 0)
             {
                 ErrorProvider.SetError(ProveedorId_numericUpDown, "Elija un Proveedor por el Id");
+                paso = false;
+            }
+
+            bool paso2 = ValidarProveedor();
+            if(paso2 == false)
+            {
+                ErrorProvider.SetError(ProveedorId_numericUpDown, "El Proveedor que intento buscar no exíste");
+                paso = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Proveedor_textBox.Text))
+            {
+                ErrorProvider.SetError(Proveedor_textBox, "Busque un Proveedor");
                 paso = false;
             }
 
@@ -104,7 +136,7 @@ namespace ProyectoCooasar.UI.Registros
 
             RepositorioBase<Proveedores> repositorio = new RepositorioBase<Proveedores>();
             Proveedores Proveedor;
-            Proveedor = repositorio.Buscar((int)ProveedorId_numericUpDown.Value);
+            Proveedor = repositorio.Buscar(Compra.ProveedorId);
             Proveedor_textBox.Text = Proveedor.Nombre;
 
             Balance_textBox.Text = Compra.Balance.ToString();
@@ -220,17 +252,19 @@ namespace ProyectoCooasar.UI.Registros
                 Compra = ComprasBLL.Buscar(id);
                 if (Compra != null)
                 {
-                    MessageBox.Show("Compra Encontrada!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LlenarCampos(Compra);
+                    MessageBox.Show("Compra Encontrada!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 
                 }
                 else
                 {
                     MessageBox.Show("Compra No Encontrada!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
+            } 
             catch (Exception)
             {
                 MessageBox.Show("No se pudo buscar");
+                
             }
         }
 
@@ -256,6 +290,13 @@ namespace ProyectoCooasar.UI.Registros
             {
                 MessageBox.Show("Producto no encontrado");
             }
+        }
+
+        private void LimpiarDetalle()
+        {
+            ProductoId_numericUpDown.Value = 0;
+            Producto_textBox.Clear();
+            Cantidad_numericUpDown.Value = 0;
         }
 
         private void Agregar_button_Click(object sender, EventArgs e)
@@ -290,8 +331,7 @@ namespace ProyectoCooasar.UI.Registros
                     );
                 CargarGrid();
                 ProductoId_numericUpDown.Focus();
-                ProductoId_numericUpDown.Value = 0;
-                Producto_textBox.Clear();
+                LimpiarDetalle();
 
                 Balance_textBox.Text = CalculoBalance().ToString();
 
@@ -299,6 +339,7 @@ namespace ProyectoCooasar.UI.Registros
             catch (Exception)
             {
                 MessageBox.Show("Producto no encontrado");
+                LimpiarDetalle();
             }
         }
 
@@ -333,6 +374,7 @@ namespace ProyectoCooasar.UI.Registros
             catch (Exception)
             {
                 MessageBox.Show("Proveedor no encontrado");
+                Proveedor_textBox.Text = string.Empty;
             }
         }
     }
