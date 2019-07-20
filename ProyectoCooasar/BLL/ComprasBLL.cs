@@ -40,9 +40,9 @@ namespace BLL
             try
             {
                 var anterior = Buscar(compras.CompraId);
-                foreach (var item in anterior.Detalle)
+                foreach (var item in anterior.DetalleCompra)
                 {
-                    if (!compras.Detalle.Any(d => d.Id == item.Id))
+                    if (!compras.DetalleCompra.Any(d => d.Id == item.Id))
                         db.Entry(item).State = EntityState.Deleted;
 
                 }
@@ -100,7 +100,7 @@ namespace BLL
                 Compra = db.Compra.Find(id);
                 if (Compra != null)
                 {
-                    Compra.Detalle.Count();
+                    Compra.DetalleCompra.Count();
                 }
 
             }

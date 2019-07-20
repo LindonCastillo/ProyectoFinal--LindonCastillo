@@ -17,7 +17,7 @@ namespace Entidades
         public int Itbis { get; set; }
         //public int UsuarioId { get; set; }
 
-        public virtual List<ComprasDetalle> Detalle { get; set; }
+        public virtual List<ComprasDetalle> DetalleCompra { get; set; }
 
         public Compras()
         {
@@ -27,7 +27,7 @@ namespace Entidades
             Balance = 0;
             Itbis = 0;
 
-            Detalle = new List<ComprasDetalle>();
+            DetalleCompra = new List<ComprasDetalle>();
         }
 
     }

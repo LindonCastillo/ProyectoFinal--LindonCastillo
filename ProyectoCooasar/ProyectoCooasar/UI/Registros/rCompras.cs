@@ -34,6 +34,7 @@ namespace ProyectoCooasar.UI.Registros
             Proveedor_textBox.Text = string.Empty;
             ProductoId_numericUpDown.Value = 0;
             Producto_textBox.Text = string.Empty;
+            Balance_textBox.Text = string.Empty;
 
             this.Detalle = new List<ComprasDetalle>();
             CargarGrid();
@@ -88,8 +89,11 @@ namespace ProyectoCooasar.UI.Registros
             compras.ProveedorId = (int)ProveedorId_numericUpDown.Value;
             compras.Balance = CalculoBalance();
 
+            compras.DetalleCompra = this.Detalle;
+
             return compras;
         }
+
 
         private void LlenarCampos(Compras Compra)
         {
@@ -97,7 +101,16 @@ namespace ProyectoCooasar.UI.Registros
             Fecha_dateTimePicker.Value = Compra.Fecha;
             Itbis_numericUpDown.Value = Compra.Itbis;
             ProveedorId_numericUpDown.Value = Compra.ProveedorId;
+
+            RepositorioBase<Proveedores> repositorio = new RepositorioBase<Proveedores>();
+            Proveedores Proveedor;
+            Proveedor = repositorio.Buscar((int)ProveedorId_numericUpDown.Value);
+            Proveedor_textBox.Text = Proveedor.Nombre;
+
             Balance_textBox.Text = Compra.Balance.ToString();
+
+            this.Detalle = Compra.DetalleCompra;
+            CargarGrid();
         }
 
         private bool ExiteEnLaBaseDeDatos()
@@ -163,6 +176,7 @@ namespace ProyectoCooasar.UI.Registros
                 }
 
                 paso = ComprasBLL.Modificar(Compra);
+                Limpiar();
                 MessageBox.Show("Se modifico con Exito!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -206,8 +220,8 @@ namespace ProyectoCooasar.UI.Registros
                 Compra = ComprasBLL.Buscar(id);
                 if (Compra != null)
                 {
-                    LlenarCampos(Compra);
                     MessageBox.Show("Compra Encontrada!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LlenarCampos(Compra);
                 }
                 else
                 {
