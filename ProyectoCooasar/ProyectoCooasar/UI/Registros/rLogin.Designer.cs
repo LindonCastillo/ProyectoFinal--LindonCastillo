@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rLogin));
             this.IniciarSesion_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,12 +43,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Limpiar_button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // IniciarSesion_button
@@ -205,6 +208,10 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "";
             // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
+            // 
             // rLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -231,6 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Maximixar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +259,6 @@
         private System.Windows.Forms.PictureBox Maximixar_pictureBox;
         private System.Windows.Forms.PictureBox Cerrar_pictureBox;
         private System.Windows.Forms.Button Limpiar_button;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
     }
 }

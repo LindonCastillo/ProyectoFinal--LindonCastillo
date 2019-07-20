@@ -54,8 +54,47 @@ namespace ProyectoCooasar.UI.Registros
             Clave_textBox.Text = string.Empty;
         }
 
+        private bool ValidarCampos()
+        {
+            bool paso = true;
+
+            if(string.IsNullOrWhiteSpace(Usuario_textBox.Text))
+            {
+                ErrorProvider.SetError(Usuario_textBox, "El campo Usuario no puede estar vacío");
+                paso = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Clave_textBox.Text))
+            {
+                ErrorProvider.SetError(Clave_textBox, "El campo Clave no puede estar vacío");
+                paso = false;
+            }
+
+            return paso;
+        }
+        private bool ValidarLogin()
+        {
+            bool paso = false;
+
+            if(Usuario_textBox.Text =="Admin" && Clave_textBox.Text == "12345")
+            {
+                paso = true;
+            }
+
+            return paso;
+        }
         private void IniciarSesion_button_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos())
+            {
+                return;
+            }
+
+            if (!ValidarLogin())
+            {
+                MessageBox.Show("Usuaio No valido", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             Dispose();
         }
          
