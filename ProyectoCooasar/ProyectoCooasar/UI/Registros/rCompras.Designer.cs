@@ -38,6 +38,8 @@
             this.Fecha_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Cantidad_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Balance_textBox = new System.Windows.Forms.TextBox();
             this.Remover_button = new System.Windows.Forms.Button();
@@ -50,7 +52,7 @@
             this.Detalle_dataGridView = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.ProveedorId_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BuscarProveedor_button = new System.Windows.Forms.Button();
             this.Buscar_button = new System.Windows.Forms.Button();
             this.Eliminar_button = new System.Windows.Forms.Button();
             this.Guardar_button = new System.Windows.Forms.Button();
@@ -58,16 +60,14 @@
             this.Itbis_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Cantidad_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CompraId_numericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cantidad_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoId_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProveedorId_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Itbis_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cantidad_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -92,6 +92,11 @@
             // CompraId_numericUpDown
             // 
             this.CompraId_numericUpDown.Location = new System.Drawing.Point(99, 12);
+            this.CompraId_numericUpDown.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.CompraId_numericUpDown.Name = "CompraId_numericUpDown";
             this.CompraId_numericUpDown.Size = new System.Drawing.Size(116, 20);
             this.CompraId_numericUpDown.TabIndex = 9;
@@ -154,6 +159,28 @@
             this.panel1.Size = new System.Drawing.Size(464, 286);
             this.panel1.TabIndex = 16;
             // 
+            // Cantidad_numericUpDown
+            // 
+            this.Cantidad_numericUpDown.Location = new System.Drawing.Point(89, 42);
+            this.Cantidad_numericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.Cantidad_numericUpDown.Name = "Cantidad_numericUpDown";
+            this.Cantidad_numericUpDown.Size = new System.Drawing.Size(109, 20);
+            this.Cantidad_numericUpDown.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 46);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 16);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Cantidad";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -211,6 +238,11 @@
             // ProductoId_numericUpDown
             // 
             this.ProductoId_numericUpDown.Location = new System.Drawing.Point(89, 17);
+            this.ProductoId_numericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.ProductoId_numericUpDown.Name = "ProductoId_numericUpDown";
             this.ProductoId_numericUpDown.Size = new System.Drawing.Size(69, 20);
             this.ProductoId_numericUpDown.TabIndex = 17;
@@ -239,8 +271,10 @@
             // 
             // Producto_textBox
             // 
+            this.Producto_textBox.BackColor = System.Drawing.Color.White;
             this.Producto_textBox.Location = new System.Drawing.Point(276, 16);
             this.Producto_textBox.Name = "Producto_textBox";
+            this.Producto_textBox.ReadOnly = true;
             this.Producto_textBox.Size = new System.Drawing.Size(132, 20);
             this.Producto_textBox.TabIndex = 16;
             // 
@@ -268,20 +302,26 @@
             // ProveedorId_numericUpDown
             // 
             this.ProveedorId_numericUpDown.Location = new System.Drawing.Point(99, 105);
+            this.ProveedorId_numericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.ProveedorId_numericUpDown.Name = "ProveedorId_numericUpDown";
             this.ProveedorId_numericUpDown.Size = new System.Drawing.Size(76, 20);
             this.ProveedorId_numericUpDown.TabIndex = 11;
             // 
-            // button1
+            // BuscarProveedor_button
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.button1.Location = new System.Drawing.Point(181, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 26);
-            this.button1.TabIndex = 10;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.BuscarProveedor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarProveedor_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
+            this.BuscarProveedor_button.Location = new System.Drawing.Point(181, 102);
+            this.BuscarProveedor_button.Name = "BuscarProveedor_button";
+            this.BuscarProveedor_button.Size = new System.Drawing.Size(34, 26);
+            this.BuscarProveedor_button.TabIndex = 10;
+            this.BuscarProveedor_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarProveedor_button.UseVisualStyleBackColor = true;
+            this.BuscarProveedor_button.Click += new System.EventHandler(this.BuscarProveedor_button_Click);
             // 
             // Buscar_button
             // 
@@ -342,6 +382,11 @@
             // Itbis_numericUpDown
             // 
             this.Itbis_numericUpDown.Location = new System.Drawing.Point(99, 73);
+            this.Itbis_numericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.Itbis_numericUpDown.Name = "Itbis_numericUpDown";
             this.Itbis_numericUpDown.Size = new System.Drawing.Size(76, 20);
             this.Itbis_numericUpDown.TabIndex = 17;
@@ -360,23 +405,6 @@
             // 
             this.ErrorProvider.ContainerControl = this;
             // 
-            // Cantidad_numericUpDown
-            // 
-            this.Cantidad_numericUpDown.Location = new System.Drawing.Point(89, 42);
-            this.Cantidad_numericUpDown.Name = "Cantidad_numericUpDown";
-            this.Cantidad_numericUpDown.Size = new System.Drawing.Size(109, 20);
-            this.Cantidad_numericUpDown.TabIndex = 24;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(11, 46);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 16);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Cantidad";
-            // 
             // rCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,7 +416,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ProveedorId_numericUpDown);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BuscarProveedor_button);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Fecha_dateTimePicker);
             this.Controls.Add(this.label2);
@@ -405,12 +433,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.CompraId_numericUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cantidad_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoId_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProveedorId_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Itbis_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cantidad_numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,7 +460,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown ProveedorId_numericUpDown;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BuscarProveedor_button;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Balance_textBox;
         private System.Windows.Forms.Button Remover_button;
