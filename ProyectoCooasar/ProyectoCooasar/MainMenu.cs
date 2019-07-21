@@ -63,5 +63,11 @@ namespace ProyectoCooasar
             cProveedores u = new cProveedores();
             u.Show();
         }
+
+        private void PagosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rPagos p = new rPagos();
+            p.Show();
+        }
     }
 }

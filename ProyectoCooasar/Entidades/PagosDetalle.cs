@@ -24,5 +24,14 @@ namespace Entidades
             TipoPaga = string.Empty;
             Pago = 0;
         }
+
+        public PagosDetalle(int Id, int PagoId, int CompraId, string TipoPaga, int Pago)
+        {
+            this.Id = Id;
+            this.PagoId = PagoId;
+            this.CompraId = CompraId;
+            this.TipoPaga = TipoPaga;
+            this.Pago = Pago;
+        }
     }
 }

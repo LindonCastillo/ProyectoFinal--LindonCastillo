@@ -73,11 +73,6 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(Balance_textBox.Text))
-            {
-                ErrorProvider.SetError(Balance_textBox, "Busque una Compra");
-                paso = false;
-            }
 
             if (this.Detalle.Count == 0)
             {
@@ -92,7 +87,24 @@ namespace ProyectoCooasar.UI.Registros
         {
             ErrorProvider.Clear();
             bool paso = true;
+            if (string.IsNullOrWhiteSpace(Balance_textBox.Text))
+            {
+                ErrorProvider.SetError(Balance_textBox, "Busque una Compra");
+                paso = false;
+            }
 
+            if (CompraId_numericUpDown.Value == 0)
+            {
+                ErrorProvider.SetError(CompraId_numericUpDown, "El valor de este campo no puede ser cero");
+                paso = false;
+            }
+
+            bool paso2 = ValidarCompra();
+            if (paso2 == false)
+            {
+                ErrorProvider.SetError(CompraId_numericUpDown, "La Compra que intento buscar no exíste");
+                paso = false;
+            }
 
             if (Efectivo_radioButton.Checked == false && Cheque_radioButton.Checked == false)
             {
@@ -100,80 +112,149 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
-            if (PagoId_numericUpDown.Value == 0)
-            {
-                ErrorProvider.SetError(PagoId_numericUpDown, "El valor de este campo no puede ser cero");
-                paso = false;
-            }
+
 
             return paso;
         }
 
-        private Compras LlenarClase()
+        private Pagos LlenarClase()
         {
-            Compras compras = new Compras();
-            compras.CompraId = (int)CompraId_numericUpDown.Value;
-            compras.Fecha = Fecha_dateTimePicker.Value;
-            compras.Itbis = (int)Itbis_numericUpDown.Value;
-            compras.ProveedorId = (int)ProveedorId_numericUpDown.Value;
-            compras.Balance = CalculoBalance();
+            Pagos pagos = new Pagos();
+            pagos.PagoId = (int)PagoId_numericUpDown.Value;
+            pagos.Fecha = Fecha_dateTimePicker.Value;
+            pagos.CompraId = (int)CompraId_numericUpDown.Value;
+            
+            pagos.PagoTotal = CalculoBalance();
 
-            compras.DetalleCompra = this.Detalle;
+            pagos.DetallePagos = this.Detalle;
 
-            return compras;
+            return pagos;
         }
 
 
-        private void LlenarCampos(Compras Compra)
+        private void LlenarCampos(Pagos pagos)
         {
-            CompraId_numericUpDown.Value = Compra.CompraId;
-            Fecha_dateTimePicker.Value = Compra.Fecha;
-            Itbis_numericUpDown.Value = Compra.Itbis;
-            ProveedorId_numericUpDown.Value = Compra.ProveedorId;
+            PagoId_numericUpDown.Value = pagos.PagoId;
+            Fecha_dateTimePicker.Value = pagos.Fecha;
+            CompraId_numericUpDown.Value = pagos.CompraId;
+            PagaTotal_textBox.Text = pagos.PagoTotal.ToString();
 
-            RepositorioBase<Proveedores> repositorio = new RepositorioBase<Proveedores>();
-            Proveedores Proveedor;
-            Proveedor = repositorio.Buscar(Compra.ProveedorId);
-            Proveedor_textBox.Text = Proveedor.Nombre;
+            Compras compras = ComprasBLL.Buscar((int)pagos.CompraId);
+            Balance_textBox.Text = compras.Balance.ToString();
 
-            Balance_textBox.Text = Compra.Balance.ToString();
-
-            this.Detalle = Compra.DetalleCompra;
+            this.Detalle = pagos.DetallePagos;
             CargarGrid();
         }
 
         private bool ExiteEnLaBaseDeDatos()
         {
-            Compras Compra = ComprasBLL.Buscar((int)CompraId_numericUpDown.Value);
-            return (Compra != null);
+            Pagos Pago = PagosBLL.Buscar((int)PagoId_numericUpDown.Value);
+            return (Pago != null);
         }
 
         private void Nuevo_button_Click(object sender, EventArgs e)
         {
-
+            Limpiar();
+            LimpiarDetalle();
         }
 
         private void Guardar_button_Click(object sender, EventArgs e)
         {
+            Pagos pagos;
+            bool paso = false;
 
+            if (!Validar())
+            {
+                return;
+            }
+
+            pagos = LlenarClase();
+
+            if (PagoId_numericUpDown.Value == 0)
+            {
+                paso = PagosBLL.Guardar(pagos);
+                if (paso)
+                {
+                    Limpiar();
+                    MessageBox.Show("Guardado!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No fue posible guardar!!", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                if (!ExiteEnLaBaseDeDatos())
+                {
+                    MessageBox.Show("No se puede Modificar un pago que no existe", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                paso = PagosBLL.Modificar(pagos);
+                Limpiar();
+                MessageBox.Show("Se modifico con Exito!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void Eliminar_button_Click(object sender, EventArgs e)
         {
+            ErrorProvider.Clear();
+            int id;
+            int.TryParse(Pago_numericUpDown.Text, out id);
 
+            try
+            {
+                if (PagosBLL.Eliminar(id))
+                {
+                    Limpiar();
+                    MessageBox.Show("Eliminado", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se puede eliminar este Pago", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se pudo eliminar");
+            }
         }
 
         private void Buscar_button_Click(object sender, EventArgs e)
         {
+            Pagos Pago;
+            int id = Convert.ToInt32(CompraId_numericUpDown.Value);
 
+            Limpiar();
+            try
+            {
+                Pago = PagosBLL.Buscar(id);
+                if (Pago != null)
+                {
+                    LlenarCampos(Pago);
+                    MessageBox.Show("Pago Encontrado!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Pago No Encontrado!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se pudo buscar");
+
+            }
         }
 
         private void BuscarCompraId_button_Click(object sender, EventArgs e)
         {
-            Compras compras;
-
             try
             {
+                Compras compras;
                 if (CompraId_numericUpDown.Value != 0)
                 {
                     compras = ComprasBLL.Buscar((int)CompraId_numericUpDown.Value);
@@ -194,12 +275,67 @@ namespace ProyectoCooasar.UI.Registros
 
         private void Agregar_button_Click(object sender, EventArgs e)
         {
+            if (!Validar2())
+            {
+                return;
+            }
 
+            if (Detalle.Any(A => A.CompraId == CompraId_numericUpDown.Value))
+            {
+                MessageBox.Show("Ya se agrego un pago a esa la compra previamente", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            string tipopago = string.Empty;
+            if (Cheque_radioButton.Checked == true)
+                tipopago = "Cheque";
+
+            if (Efectivo_radioButton.Checked == true)
+                tipopago = "Efectivo";
+
+            try
+            {
+                if (Detalle_dataGridView.DataSource != null)
+                    this.Detalle = (List<PagosDetalle>)Detalle_dataGridView.DataSource;
+
+                this.Detalle.Add(
+                    new PagosDetalle(
+                        Id: 0,
+                        PagoId: (int)PagoId_numericUpDown.Value,
+                        CompraId: (int)CompraId_numericUpDown.Value,
+                        TipoPaga: tipopago,
+                        Pago: (int)Pago_numericUpDown.Value
+                        )
+                    );
+                CargarGrid();
+                LimpiarDetalle();
+
+                Balance_textBox.Text = CalculoBalance().ToString();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Producto no encontrado");
+                LimpiarDetalle();
+            }
+        }
+
+        private void LimpiarDetalle()
+        {
+            CompraId_numericUpDown.Value = 0;
+            Efectivo_radioButton.Checked = false;
+            Cheque_radioButton.Checked = false;
+            Pago_numericUpDown.Value = 0;
+            Balance_textBox.Text = string.Empty;
         }
 
         private void Remover_button_Click(object sender, EventArgs e)
         {
-
+            if (Detalle_dataGridView.Rows.Count > 0 && Detalle_dataGridView.CurrentRow != null)
+            {
+                Detalle.RemoveAt(Detalle_dataGridView.CurrentRow.Index);
+                CargarGrid();
+                Balance_textBox.Text = CalculoBalance().ToString();
+            }
         }
         private decimal CalculoBalance()
         {

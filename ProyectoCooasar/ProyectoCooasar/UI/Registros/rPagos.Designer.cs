@@ -189,7 +189,7 @@
             this.panel2.Controls.Add(this.Efectivo_radioButton);
             this.panel2.Location = new System.Drawing.Point(98, 8);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 30);
+            this.panel2.Size = new System.Drawing.Size(157, 30);
             this.panel2.TabIndex = 34;
             // 
             // Cheque_radioButton
