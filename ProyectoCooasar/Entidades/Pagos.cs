@@ -12,6 +12,7 @@ namespace Entidades
         [Key]
         public int PagoId { get; set; }
         public DateTime Fecha { get; set; }
+        public int CompraId { get; set; }
         public decimal PagoTotal { get; set; }
         //public int UsuarioId { get; set; }
 
@@ -21,6 +22,7 @@ namespace Entidades
         {
             PagoId = 0;
             Fecha = DateTime.Now;
+            CompraId = 0;
             PagoTotal = 0;
 
             DetallePagos = new List<PagosDetalle>();

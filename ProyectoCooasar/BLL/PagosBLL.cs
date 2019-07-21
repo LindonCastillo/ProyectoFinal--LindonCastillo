@@ -18,8 +18,12 @@ namespace BLL
             Contexto db = new Contexto();
             try
             {
+
                 if (db.Pago.Add(pagos) != null)
+                {
                     paso = db.SaveChanges() > 0;
+                }
+                    
             }
             catch (Exception)
             {

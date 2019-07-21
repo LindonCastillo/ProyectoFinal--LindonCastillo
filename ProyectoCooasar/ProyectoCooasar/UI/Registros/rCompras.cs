@@ -157,7 +157,7 @@ namespace ProyectoCooasar.UI.Registros
             Detalle_dataGridView.DataSource = this.Detalle;
         }
 
-        public decimal CalculoBalance()
+        private decimal CalculoBalance()
         {
             decimal Balance = 0;
 

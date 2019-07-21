@@ -107,7 +107,7 @@ namespace ProyectoCooasar.UI.Consultas
             {
                 listaProductos = repositorio.GetList(p => true);
             }
-
+             
             if (FiltroFecha_checkBox.Checked == true)
             {
                 listaProductos = listaProductos.Where(c => c.Fecha.Date >= Desde_dateTimePicker.Value.Date && c.Fecha.Date <= Hasta_dateTimePicker.Value.Date).ToList();
