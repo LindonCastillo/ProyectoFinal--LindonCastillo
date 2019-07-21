@@ -79,6 +79,11 @@
             // CompraId_numericUpDown
             // 
             this.CompraId_numericUpDown.Location = new System.Drawing.Point(95, 94);
+            this.CompraId_numericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.CompraId_numericUpDown.Name = "CompraId_numericUpDown";
             this.CompraId_numericUpDown.Size = new System.Drawing.Size(99, 20);
             this.CompraId_numericUpDown.TabIndex = 25;
@@ -157,6 +162,11 @@
             // Pago_numericUpDown
             // 
             this.Pago_numericUpDown.Location = new System.Drawing.Point(305, 13);
+            this.Pago_numericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.Pago_numericUpDown.Name = "Pago_numericUpDown";
             this.Pago_numericUpDown.Size = new System.Drawing.Size(93, 20);
             this.Pago_numericUpDown.TabIndex = 17;
@@ -245,6 +255,11 @@
             // PagoId_numericUpDown
             // 
             this.PagoId_numericUpDown.Location = new System.Drawing.Point(95, 16);
+            this.PagoId_numericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.PagoId_numericUpDown.Name = "PagoId_numericUpDown";
             this.PagoId_numericUpDown.Size = new System.Drawing.Size(99, 20);
             this.PagoId_numericUpDown.TabIndex = 22;

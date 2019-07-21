@@ -69,5 +69,11 @@ namespace ProyectoCooasar
             rPagos p = new rPagos();
             p.Show();
         }
+
+        private void ComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cCompras c = new cCompras();
+            c.Show();
+        }
     }
 }

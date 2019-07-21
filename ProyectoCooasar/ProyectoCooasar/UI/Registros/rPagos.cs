@@ -124,7 +124,7 @@ namespace ProyectoCooasar.UI.Registros
             pagos.Fecha = Fecha_dateTimePicker.Value;
             pagos.CompraId = (int)CompraId_numericUpDown.Value;
             
-            pagos.PagoTotal = CalculoBalance();
+            pagos.PagoTotal = CalculoPagoTotal();
 
             pagos.DetallePagos = this.Detalle;
 
@@ -201,7 +201,7 @@ namespace ProyectoCooasar.UI.Registros
         {
             ErrorProvider.Clear();
             int id;
-            int.TryParse(Pago_numericUpDown.Text, out id);
+            int.TryParse(PagoId_numericUpDown.Text, out id);
 
             try
             {
@@ -226,7 +226,7 @@ namespace ProyectoCooasar.UI.Registros
         private void Buscar_button_Click(object sender, EventArgs e)
         {
             Pagos Pago;
-            int id = Convert.ToInt32(CompraId_numericUpDown.Value);
+            int id = Convert.ToInt32(PagoId_numericUpDown.Value);
 
             Limpiar();
             try
@@ -254,10 +254,10 @@ namespace ProyectoCooasar.UI.Registros
         {
             try
             {
-                Compras compras;
                 if (CompraId_numericUpDown.Value != 0)
                 {
-                    compras = ComprasBLL.Buscar((int)CompraId_numericUpDown.Value);
+
+                    Compras compras = ComprasBLL.Buscar((int)CompraId_numericUpDown.Value);
                     Balance_textBox.Text = compras.Balance.ToString();
                 }
                 else
@@ -309,7 +309,8 @@ namespace ProyectoCooasar.UI.Registros
                 CargarGrid();
                 LimpiarDetalle();
 
-                Balance_textBox.Text = CalculoBalance().ToString();
+                MostrarBalance();
+                PagaTotal_textBox.Text = CalculoPagoTotal().ToString();
 
             }
             catch (Exception)
@@ -321,11 +322,9 @@ namespace ProyectoCooasar.UI.Registros
 
         private void LimpiarDetalle()
         {
-            CompraId_numericUpDown.Value = 0;
             Efectivo_radioButton.Checked = false;
             Cheque_radioButton.Checked = false;
             Pago_numericUpDown.Value = 0;
-            Balance_textBox.Text = string.Empty;
         }
 
         private void Remover_button_Click(object sender, EventArgs e)
@@ -334,20 +333,28 @@ namespace ProyectoCooasar.UI.Registros
             {
                 Detalle.RemoveAt(Detalle_dataGridView.CurrentRow.Index);
                 CargarGrid();
-                Balance_textBox.Text = CalculoBalance().ToString();
+                PagaTotal_textBox.Text = CalculoPagoTotal().ToString();
             }
         }
-        private decimal CalculoBalance()
+        private decimal CalculoPagoTotal()
         {
-            decimal Balance = 0;
+            decimal PagoTotal = 0;
 
             foreach (var item in Detalle)
             {
-                Balance += item.Pago;
+                PagoTotal += item.Pago;
             }
 
-            return Balance;
+            return PagoTotal;
         }
+
+        private void MostrarBalance()
+        {
+            Compras compras = ComprasBLL.Buscar((int)CompraId_numericUpDown.Value);
+            Balance_textBox.Text = compras.Balance.ToString();
+        }
+
+
         private void CargarGrid()
         {
             Detalle_dataGridView.DataSource = null;
