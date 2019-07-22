@@ -122,8 +122,6 @@ namespace ProyectoCooasar.UI.Registros
             Pagos pagos = new Pagos();
             pagos.PagoId = (int)PagoId_numericUpDown.Value;
             pagos.Fecha = Fecha_dateTimePicker.Value;
-            pagos.CompraId = (int)CompraId_numericUpDown.Value;
-            
             pagos.PagoTotal = CalculoPagoTotal();
 
             pagos.DetallePagos = this.Detalle;
@@ -136,11 +134,7 @@ namespace ProyectoCooasar.UI.Registros
         {
             PagoId_numericUpDown.Value = pagos.PagoId;
             Fecha_dateTimePicker.Value = pagos.Fecha;
-            CompraId_numericUpDown.Value = pagos.CompraId;
             PagaTotal_textBox.Text = pagos.PagoTotal.ToString();
-
-            Compras compras = ComprasBLL.Buscar((int)pagos.CompraId);
-            Balance_textBox.Text = compras.Balance.ToString();
 
             this.Detalle = pagos.DetallePagos;
             CargarGrid();
@@ -244,7 +238,7 @@ namespace ProyectoCooasar.UI.Registros
                 }
             }
             catch (Exception)
-            {
+            { 
                 MessageBox.Show("No se pudo buscar");
 
             }

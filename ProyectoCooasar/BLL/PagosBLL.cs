@@ -16,7 +16,7 @@ namespace BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
-            Contexto db2 = new Contexto();
+
             try
             {
                 decimal acumulador = 0;
@@ -27,11 +27,11 @@ namespace BLL
                     {
                         compraId = item.CompraId;
                     }
-                    var registroCompra = db2.Compra.Find(compraId);
+                    var registroCompra = ComprasBLL.Buscar(compraId);
 
                     foreach (var item in pagos.DetallePagos)
                     {
-                        acumulador += item.Pago;
+                        acumulador = item.Pago;
                     }
 
                     registroCompra.Balance -= acumulador;
@@ -58,11 +58,22 @@ namespace BLL
             Contexto db = new Contexto();
             try
             {
+                //var anterior = ComprasBLL.Buscar(pagos.getId());
+
+
                 var anterior = Buscar(pagos.PagoId);
                 foreach (var item in anterior.DetallePagos)
                 {
                     if (!pagos.DetallePagos.Any(d => d.Id == item.Id))
+                    {
+
+                        var compraP = ComprasBLL.Buscar(item.CompraId);
+                        compraP.Balance -= item.Pago;
+                        ComprasBLL.Modificar(compraP);
                         db.Entry(item).State = EntityState.Deleted;
+
+                    }
+                        
 
                 }
 
@@ -77,6 +88,22 @@ namespace BLL
                         db.Entry(item).State = EntityState.Modified;
                     }
                 }
+
+                //decimal acumulador = 0;
+                //int compraId = 0;
+                //foreach (var item in pagos.DetallePagos)
+                //{
+                //    compraId = item.CompraId;
+                //}
+                //var registroCompra = ComprasBLL.Buscar(compraId);
+
+                //foreach (var item in pagos.DetallePagos)
+                //{
+                //    acumulador = item.Pago;
+                //}
+
+                //registroCompra.Balance -= acumulador;
+                //ComprasBLL.Modificar(registroCompra);
 
                 db.Entry(pagos).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);

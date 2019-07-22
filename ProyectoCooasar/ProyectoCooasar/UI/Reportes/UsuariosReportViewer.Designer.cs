@@ -42,7 +42,6 @@
             this.Usuarios_crystalReportViewer.Name = "Usuarios_crystalReportViewer";
             this.Usuarios_crystalReportViewer.Size = new System.Drawing.Size(800, 450);
             this.Usuarios_crystalReportViewer.TabIndex = 0;
-            this.Usuarios_crystalReportViewer.Load += new System.EventHandler(this.Usuarios_crystalReportViewer_Load);
             // 
             // UsuariosReportViewer
             // 
@@ -53,7 +52,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UsuariosReportViewer";
             this.Text = "Usuarios ReportViewer";
-            this.Load += new System.EventHandler(this.UsuariosReportViewer_Load);
             this.ResumeLayout(false);
 
         }
