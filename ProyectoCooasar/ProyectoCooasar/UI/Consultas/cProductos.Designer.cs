@@ -58,6 +58,7 @@
             this.Imprimir_button.Text = "Imprimir";
             this.Imprimir_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Imprimir_button.UseVisualStyleBackColor = true;
+            this.Imprimir_button.Click += new System.EventHandler(this.Imprimir_button_Click);
             // 
             // label3
             // 

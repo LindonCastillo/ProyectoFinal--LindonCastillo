@@ -1,5 +1,6 @@
 ﻿using ProyectoCooasar.BLL;
 using ProyectoCooasar.Entidades;
+using ProyectoCooasar.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,6 +116,27 @@ namespace ProyectoCooasar.UI.Consultas
 
             Consulta_dataGridView.DataSource = null;
             Consulta_dataGridView.DataSource = listaProductos;
+        }
+
+        private void Imprimir_button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listaProductos.Count == 0)
+                {
+                    MessageBox.Show("No Hay Datos Que Imprimir");
+                    return;
+                }
+                else
+                {
+                    ProductosReportViewer reportViewer = new ProductosReportViewer(listaProductos);
+                    reportViewer.ShowDialog();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("No Hay Datos Que Imprimir");
+            }
         }
     }
     

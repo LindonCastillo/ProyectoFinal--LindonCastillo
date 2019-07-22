@@ -53,6 +53,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UsuariosReportViewer";
             this.Text = "Usuarios ReportViewer";
+            this.Load += new System.EventHandler(this.UsuariosReportViewer_Load);
             this.ResumeLayout(false);
 
         }

@@ -16,11 +16,26 @@ namespace BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
+            Contexto db2 = new Contexto();
             try
             {
-
+                decimal acumulador = 0;
+                int compraId = 0;
                 if (db.Pago.Add(pagos) != null)
                 {
+                    foreach (var item in pagos.DetallePagos)
+                    {
+                        compraId = item.CompraId;
+                    }
+                    var registroCompra = db2.Compra.Find(compraId);
+
+                    foreach (var item in pagos.DetallePagos)
+                    {
+                        acumulador += item.Pago;
+                    }
+
+                    registroCompra.Balance -= acumulador;
+                    ComprasBLL.Modificar(registroCompra);
                     paso = db.SaveChanges() > 0;
                 }
                     
