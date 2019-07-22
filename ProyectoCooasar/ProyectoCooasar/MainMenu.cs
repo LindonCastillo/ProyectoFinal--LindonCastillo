@@ -75,5 +75,6 @@ namespace ProyectoCooasar
             cCompras c = new cCompras();
             c.Show();
         }
+
     }
 }
