@@ -20,7 +20,7 @@ namespace ProyectoCooasar.UI.Consultas
             InitializeComponent();
         }
 
-        private void Consultar_button_Click(object sender, EventArgs e)
+        private void Consultar_button_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Proveedores> repositorio = new RepositorioBase<Proveedores>();
 
@@ -83,6 +83,11 @@ namespace ProyectoCooasar.UI.Consultas
 
             Consulta_dataGridView.DataSource = null;
             Consulta_dataGridView.DataSource = listaProveedores;
+        }
+
+        private void Imprimir_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

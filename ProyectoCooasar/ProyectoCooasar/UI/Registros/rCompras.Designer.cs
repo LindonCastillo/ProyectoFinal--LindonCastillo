@@ -83,7 +83,7 @@
             // Proveedor_textBox
             // 
             this.Proveedor_textBox.BackColor = System.Drawing.Color.White;
-            this.Proveedor_textBox.Location = new System.Drawing.Point(293, 104);
+            this.Proveedor_textBox.Location = new System.Drawing.Point(292, 104);
             this.Proveedor_textBox.Name = "Proveedor_textBox";
             this.Proveedor_textBox.ReadOnly = true;
             this.Proveedor_textBox.Size = new System.Drawing.Size(132, 20);
@@ -91,7 +91,7 @@
             // 
             // CompraId_numericUpDown
             // 
-            this.CompraId_numericUpDown.Location = new System.Drawing.Point(99, 12);
+            this.CompraId_numericUpDown.Location = new System.Drawing.Point(98, 12);
             this.CompraId_numericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -124,7 +124,7 @@
             // Fecha_dateTimePicker
             // 
             this.Fecha_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Fecha_dateTimePicker.Location = new System.Drawing.Point(99, 43);
+            this.Fecha_dateTimePicker.Location = new System.Drawing.Point(98, 43);
             this.Fecha_dateTimePicker.Name = "Fecha_dateTimePicker";
             this.Fecha_dateTimePicker.Size = new System.Drawing.Size(210, 20);
             this.Fecha_dateTimePicker.TabIndex = 14;
@@ -185,7 +185,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(223, 255);
+            this.label8.Location = new System.Drawing.Point(222, 255);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 21);
             this.label8.TabIndex = 23;
@@ -293,7 +293,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(221, 109);
+            this.label5.Location = new System.Drawing.Point(220, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 16);
             this.label5.TabIndex = 14;
@@ -301,7 +301,7 @@
             // 
             // ProveedorId_numericUpDown
             // 
-            this.ProveedorId_numericUpDown.Location = new System.Drawing.Point(99, 105);
+            this.ProveedorId_numericUpDown.Location = new System.Drawing.Point(98, 105);
             this.ProveedorId_numericUpDown.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -315,7 +315,7 @@
             // 
             this.BuscarProveedor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarProveedor_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.BuscarProveedor_button.Location = new System.Drawing.Point(181, 102);
+            this.BuscarProveedor_button.Location = new System.Drawing.Point(180, 102);
             this.BuscarProveedor_button.Name = "BuscarProveedor_button";
             this.BuscarProveedor_button.Size = new System.Drawing.Size(34, 26);
             this.BuscarProveedor_button.TabIndex = 10;
@@ -328,7 +328,7 @@
             this.Buscar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscar_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
             this.Buscar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscar_button.Location = new System.Drawing.Point(221, 3);
+            this.Buscar_button.Location = new System.Drawing.Point(220, 3);
             this.Buscar_button.Name = "Buscar_button";
             this.Buscar_button.Size = new System.Drawing.Size(88, 29);
             this.Buscar_button.TabIndex = 7;
@@ -381,7 +381,7 @@
             // 
             // Itbis_numericUpDown
             // 
-            this.Itbis_numericUpDown.Location = new System.Drawing.Point(99, 73);
+            this.Itbis_numericUpDown.Location = new System.Drawing.Point(98, 73);
             this.Itbis_numericUpDown.Maximum = new decimal(new int[] {
             100000000,
             0,

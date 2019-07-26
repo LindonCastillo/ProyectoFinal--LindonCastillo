@@ -38,7 +38,7 @@ namespace BLL
                     ComprasBLL.Modificar(registroCompra);
                     paso = db.SaveChanges() > 0;
                 }
-                    
+
             }
             catch (Exception)
             {

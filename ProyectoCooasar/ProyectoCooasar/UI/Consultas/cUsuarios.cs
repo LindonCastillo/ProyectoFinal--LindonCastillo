@@ -22,7 +22,7 @@ namespace ProyectoCooasar.UI.Consultas
             InitializeComponent();
         }
 
-        private void Consultar_button_Click(object sender, EventArgs e)
+        private void Consultar_button_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
 
@@ -71,7 +71,7 @@ namespace ProyectoCooasar.UI.Consultas
             Consulta_dataGridView.DataSource = listaUsuarios;
         }
 
-        private void Imprimir_button_Click(object sender, EventArgs e)
+        private void Imprimir_button_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -90,7 +90,6 @@ namespace ProyectoCooasar.UI.Consultas
             {
                 MessageBox.Show("No Hay Datos Que Imprimir");
             }
-
 
         }
     }

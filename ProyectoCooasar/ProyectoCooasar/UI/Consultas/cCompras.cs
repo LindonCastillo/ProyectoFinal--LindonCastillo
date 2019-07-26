@@ -22,9 +22,9 @@ namespace ProyectoCooasar.UI.Consultas
             InitializeComponent();
         }
 
-        private void Consultar_button_Click(object sender, EventArgs e)
+        private void Consultar_button_Click_1(object sender, EventArgs e)
         {
-            Compras c= new Compras();
+            Compras c = new Compras();
 
             if (Criterio_textBox.Text.Trim().Length > 0)
             {

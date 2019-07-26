@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,9 @@ namespace ProyectoCooasar.Entidades
         public string Nombre { get; set; }
         public string Email { get; set; }
         public string Usuario { get; set; }
+        [Browsable(false)]
         public string Clave { get; set; }
+        public string Permiso { get; set; }
         public DateTime FechaIngreso { get; set; }
 
         public Usuarios()
@@ -24,6 +27,7 @@ namespace ProyectoCooasar.Entidades
             Email = string.Empty;
             Usuario = string.Empty;
             Clave = string.Empty;
+            Permiso = string.Empty;
             FechaIngreso = DateTime.Now;
         }
     }
