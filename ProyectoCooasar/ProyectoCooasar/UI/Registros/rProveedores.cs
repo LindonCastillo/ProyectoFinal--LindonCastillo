@@ -83,6 +83,12 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
+            if (!Telefono_maskedTextBox.MaskCompleted)
+            {
+                ErrorProvider.SetError(Telefono_maskedTextBox, "No puede dejar el campo Telefono imcompleto");
+                paso = false;
+            }
+
             if (ProveedorId_numericUpDown.Value == 0)
             {
                 RepositorioBase<Proveedores> repositorio = new RepositorioBase<Proveedores>();

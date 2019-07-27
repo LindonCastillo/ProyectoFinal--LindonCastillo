@@ -66,6 +66,22 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
+            if (ProductoId_numericUpDown.Value == 0)
+            {
+                RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
+                var listado = new List<Productos>();
+                listado = repositorio.GetList(p => true);
+                string descripcion = Nombre_textBox.Text;
+                foreach (var i in listado)
+                {
+                    if (descripcion == i.Nombre)
+                    {
+                        MessageBox.Show("Este Producto ya está registrado", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        paso = false;
+                    }
+                }
+            }
+
             return paso;
         }
 
