@@ -143,6 +143,12 @@
     <Compile Include="UI\Reportes\ProductosReportViewer.Designer.cs">
       <DependentUpon>ProductosReportViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\ProveedoresReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ProveedoresReportViewer.Designer.cs">
+      <DependentUpon>ProveedoresReportViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Reportes\ReportProductos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ProductosReportViewer.resx">
       <DependentUpon>ProductosReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ProveedoresReportViewer.resx">
+      <DependentUpon>ProveedoresReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ReportProductos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

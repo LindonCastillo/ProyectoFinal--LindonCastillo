@@ -51,7 +51,7 @@
             this.Controls.Add(this.Producto_ReportViewer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProductosReportViewer";
-            this.Text = "ProductosReportViewer";
+            this.Text = "Productos ReportViewer";
             this.ResumeLayout(false);
 
         }

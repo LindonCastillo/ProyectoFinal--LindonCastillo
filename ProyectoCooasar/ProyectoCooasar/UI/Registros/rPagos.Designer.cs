@@ -119,7 +119,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(207, 223);
+            this.label8.Location = new System.Drawing.Point(211, 222);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 21);
             this.label8.TabIndex = 23;
@@ -128,7 +128,7 @@
             // PagaTotal_textBox
             // 
             this.PagaTotal_textBox.BackColor = System.Drawing.Color.White;
-            this.PagaTotal_textBox.Location = new System.Drawing.Point(305, 223);
+            this.PagaTotal_textBox.Location = new System.Drawing.Point(309, 223);
             this.PagaTotal_textBox.Name = "PagaTotal_textBox";
             this.PagaTotal_textBox.ReadOnly = true;
             this.PagaTotal_textBox.Size = new System.Drawing.Size(132, 20);
@@ -139,7 +139,7 @@
             this.Remover_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remover_button.Image = global::ProyectoCooasar.Properties.Resources.seo_social_web_network_internet_322_icon_icons_com_61532;
             this.Remover_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Remover_button.Location = new System.Drawing.Point(20, 217);
+            this.Remover_button.Location = new System.Drawing.Point(14, 217);
             this.Remover_button.Name = "Remover_button";
             this.Remover_button.Size = new System.Drawing.Size(132, 30);
             this.Remover_button.TabIndex = 21;
@@ -151,7 +151,7 @@
             // Agregar_button
             // 
             this.Agregar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Agregar_button.Location = new System.Drawing.Point(404, 6);
+            this.Agregar_button.Location = new System.Drawing.Point(408, 6);
             this.Agregar_button.Name = "Agregar_button";
             this.Agregar_button.Size = new System.Drawing.Size(33, 30);
             this.Agregar_button.TabIndex = 20;

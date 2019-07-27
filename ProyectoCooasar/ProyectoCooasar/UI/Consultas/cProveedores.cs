@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using ProyectoCooasar.BLL;
+using ProyectoCooasar.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,7 +88,23 @@ namespace ProyectoCooasar.UI.Consultas
 
         private void Imprimir_button_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (listaProveedores.Count == 0)
+                {
+                    MessageBox.Show("No Hay Datos Que Imprimir");
+                    return;
+                }
+                else
+                {
+                    ProveedoresReportViewer reportViewer = new ProveedoresReportViewer(listaProveedores);
+                    reportViewer.ShowDialog();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("No Hay Datos Que Imprimir");
+            }
         }
     }
     
