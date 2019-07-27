@@ -19,13 +19,15 @@ namespace BLL
 
             try
             {
-                decimal acumulador = 0;
-                int compraId = 0;
+
                 if (db.Pago.Add(pagos) != null)
                 {
+                    decimal acumulador = 0;
+                    int compraId = 0;
                     foreach (var item in pagos.DetallePagos)
                     {
                         compraId = item.CompraId;
+
                     }
                     var registroCompra = ComprasBLL.Buscar(compraId);
 

@@ -66,6 +66,22 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
+            if (UsuarioId_numericUpDown.Value == 0)
+            {
+                RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+                var listado = new List<Usuarios>();
+                listado = repositorio.GetList(p => true);
+                string descripcion = Nombre_textBox.Text;
+                foreach (var i in listado)
+                {
+                    if (descripcion == i.Nombre)
+                    {
+                        MessageBox.Show("Este Usuario ya está registrado", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        paso = false;
+                    }
+                }
+            }
+
             return paso;
         }
 

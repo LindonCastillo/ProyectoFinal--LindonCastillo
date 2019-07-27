@@ -83,6 +83,22 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
+            if (ProveedorId_numericUpDown.Value == 0)
+            {
+                RepositorioBase<Proveedores> repositorio = new RepositorioBase<Proveedores>();
+                var listado = new List<Proveedores>();
+                listado = repositorio.GetList(p => true);
+                string descripcion = Nombre_textBox.Text;
+                foreach (var i in listado)
+                {
+                    if (descripcion == i.Nombre)
+                    {
+                        MessageBox.Show("Este Proveedor ya está registrado", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        paso = false;
+                    }
+                }
+            }
+
             return paso;
         }
 

@@ -112,6 +112,11 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
+            if(Pago_numericUpDown.Value == 0)
+            {
+                ErrorProvider.SetError(Pago_numericUpDown, "El pago no puede ser cero");
+                paso = false;
+            }
 
 
             return paso;
@@ -191,16 +196,32 @@ namespace ProyectoCooasar.UI.Registros
             }
         }
 
+        private void Recontar(Pagos pagos)
+        {
+            var detalles = pagos.DetallePagos;
+
+            foreach (var item in detalles)
+            {
+                var compraId = item.CompraId;
+                Compras compra = ComprasBLL.Buscar(compraId);
+
+                compra.Balance += item.Pago;
+                ComprasBLL.Modificar(compra);
+            }
+        }
+
         private void Eliminar_button_Click(object sender, EventArgs e)
         {
             ErrorProvider.Clear();
             int id;
             int.TryParse(PagoId_numericUpDown.Text, out id);
-
+            Pagos Pago = PagosBLL.Buscar(id);
+            
             try
             {
                 if (PagosBLL.Eliminar(id))
                 {
+                    Recontar(Pago);
                     Limpiar();
                     MessageBox.Show("Eliminado", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
