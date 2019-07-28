@@ -14,9 +14,11 @@ namespace ProyectoCooasar.UI.Registros
 {
     public partial class rProductos : Form
     {
-        public rProductos()
+        public int IdUsuario;
+        public rProductos(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         private void Limpiar()
@@ -95,6 +97,7 @@ namespace ProyectoCooasar.UI.Registros
             p.PrecioCompra = PrecioCompra_numericUpDown.Value;
             p.PrecioVenta = PrecioVenta_numericUpDown.Value;
             p.ITBIS = (int)ITBIS_numericUpDown.Value;
+            p.UsuarioId = IdUsuario;
 
             return p;
         }

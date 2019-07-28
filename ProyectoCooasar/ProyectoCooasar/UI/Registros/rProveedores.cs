@@ -15,9 +15,11 @@ namespace ProyectoCooasar.UI.Registros
 {
     public partial class rProveedores : Form
     {
-        public rProveedores()
+        public int IdUsuario;
+        public rProveedores(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         private void Limpiar()
@@ -85,7 +87,7 @@ namespace ProyectoCooasar.UI.Registros
 
             if (!Telefono_maskedTextBox.MaskCompleted)
             {
-                ErrorProvider.SetError(Telefono_maskedTextBox, "No puede dejar el campo Telefono imcompleto");
+                ErrorProvider.SetError(Telefono_maskedTextBox, "No puede dejar el campo Telefono incompleto");
                 paso = false;
             }
 
@@ -142,6 +144,8 @@ namespace ProyectoCooasar.UI.Registros
                 proveedores.TipoMoneda = "Dolar";
             }
 
+            proveedores.UsuarioId = IdUsuario;
+
             return proveedores;
         }
 
@@ -179,6 +183,8 @@ namespace ProyectoCooasar.UI.Registros
             {
                 Dolar_radioButton.Checked = true;
             }
+
+            
         }
 
         private bool ExiteEnLaBaseDeDatos()

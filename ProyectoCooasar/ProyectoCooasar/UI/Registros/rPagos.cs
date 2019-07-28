@@ -16,9 +16,12 @@ namespace ProyectoCooasar.UI.Registros
     public partial class rPagos : Form
     {
         public List<PagosDetalle> Detalle { get; set; }
-        public rPagos()
+
+        public int IdUsuario;
+        public rPagos(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
             this.Detalle = new List<PagosDetalle>();
         }
         private void Limpiar()
@@ -128,6 +131,7 @@ namespace ProyectoCooasar.UI.Registros
             pagos.PagoId = (int)PagoId_numericUpDown.Value;
             pagos.Fecha = Fecha_dateTimePicker.Value;
             pagos.PagoTotal = CalculoPagoTotal();
+            pagos.UsuarioId = IdUsuario;
 
             pagos.DetallePagos = this.Detalle;
 
