@@ -80,18 +80,23 @@ namespace ProyectoCooasar.UI.Registros
         {
             bool paso = false;
 
-            if(Usuario_textBox.Text =="Admin" && Clave_textBox.Text == "12345")
+            if(Usuario_textBox.Text =="Admin" && Clave_textBox.Text == "asdfghjkl")
             {
                 paso = true;
             }
             else
             {
+
                 RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
                 var listado = new List<Usuarios>();
                 listado = repositorio.GetList(p => true);
                 foreach (var item in listado)
                 {
-                    if(Usuario_textBox.Text == item.Nombre && Clave_textBox.Text == item.Clave) { }
+                    if(Usuario_textBox.Text == item.Usuario && Clave_textBox.Text == item.Clave)
+                    {
+                        paso = true;
+                        break;
+                    }
                 }
             }
 
@@ -109,6 +114,7 @@ namespace ProyectoCooasar.UI.Registros
                 MessageBox.Show("Usuaio No valido", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            MainMenu main = new MainMenu()
             Dispose();
         }
          

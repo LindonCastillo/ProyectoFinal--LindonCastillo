@@ -19,62 +19,144 @@ namespace ProyectoCooasar
             InitializeComponent();
             rLogin l = new rLogin();
             l.ShowDialog();
+            // MostrarUsuario();
+        }
+
+        public void MostrarUsuario(int id)
+        {
+
+
         }
 
         private void ProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rProductos p = new rProductos();
-            p.Show();
+            if(Permiso_label.Text == "Almacen" || Permiso_label.Text == "Administrador")
+            {
+                rProductos p = new rProductos();
+                p.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario","No Hay Permiso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void ProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rProveedores p = new rProveedores();
-            p.Show();
+            if(Permiso_label.Text == "Contador" || Permiso_label.Text == "Administrador")
+            {
+                rProveedores p = new rProveedores();
+                p.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void OrdenDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rCompras o = new rCompras();
-            o.Show();
+            if(Permiso_label.Text == "Contador" || Permiso_label.Text == "Administrador")
+            {
+                rCompras o = new rCompras();
+                o.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void ProductosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            cProductos p = new cProductos();
-            p.Show();
+            if (Permiso_label.Text == "Almacen"|| Permiso_label.Text == "Contador" || Permiso_label.Text == "Administrador")
+            {
+                cProductos p = new cProductos();
+                p.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void UsuariosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            rUsuarios u = new rUsuarios();
-            u.Show();
+            if (Permiso_label.Text == "Nuevo" || Permiso_label.Text == "Administrador")
+            {
+                rUsuarios u = new rUsuarios();
+                u.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+  
         }
 
         private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cUsuarios  u = new cUsuarios();
-            u.Show();
+            if (Permiso_label.Text == "Administrador" || Permiso_label.Text == "Contador")
+            {
+                cUsuarios  u = new cUsuarios();
+                u.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
         }
 
         private void ProveedoresToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            cProveedores u = new cProveedores();
-            u.Show();
+            if(Permiso_label.Text == "Administrador" || Permiso_label.Text == "Contador")
+            {
+                cProveedores u = new cProveedores();
+                u.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void PagosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rPagos p = new rPagos();
-            p.Show();
+            if (Permiso_label.Text == "Administrador" || Permiso_label.Text == "Contador")
+            {
+                rPagos p = new rPagos();
+                p.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void ComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cCompras c = new cCompras();
-            c.Show();
+            if (Permiso_label.Text == "Administrador" || Permiso_label.Text == "Contador")
+            {
+                cCompras c = new cCompras();
+                c.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
