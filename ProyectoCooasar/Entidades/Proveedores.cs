@@ -18,7 +18,7 @@ namespace Entidades
         public string Direccion { get; set; }
         public string Tipo { get; set; }
         public string TipoMoneda { get; set; }
-        //public int UsuarioId { get; set; }
+        public int UsuarioId { get; set; }
         public Proveedores()
         {
             ProveedorId = 0;
@@ -29,7 +29,7 @@ namespace Entidades
             Direccion = string.Empty;
             Tipo = string.Empty;
             TipoMoneda = string.Empty;
-            //UsuarioId = 0;
+            UsuarioId = 0;
         }
     }
 }

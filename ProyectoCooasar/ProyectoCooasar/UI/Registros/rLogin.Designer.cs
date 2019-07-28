@@ -179,7 +179,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(141, 35);
+            this.label11.Location = new System.Drawing.Point(27, 35);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 33);
             this.label11.TabIndex = 50;
@@ -188,10 +188,10 @@
             // Limpiar_button
             // 
             this.Limpiar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Limpiar_button.Location = new System.Drawing.Point(127, 158);
+            this.Limpiar_button.Location = new System.Drawing.Point(131, 158);
             this.Limpiar_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Limpiar_button.Name = "Limpiar_button";
-            this.Limpiar_button.Size = new System.Drawing.Size(98, 26);
+            this.Limpiar_button.Size = new System.Drawing.Size(94, 26);
             this.Limpiar_button.TabIndex = 0;
             this.Limpiar_button.Text = "Limpiar";
             this.Limpiar_button.UseVisualStyleBackColor = true;

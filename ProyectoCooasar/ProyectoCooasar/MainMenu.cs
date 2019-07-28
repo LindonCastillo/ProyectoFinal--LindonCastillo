@@ -1,4 +1,6 @@
-﻿using ProyectoCooasar.UI.Consultas;
+﻿using ProyectoCooasar.BLL;
+using ProyectoCooasar.Entidades;
+using ProyectoCooasar.UI.Consultas;
 using ProyectoCooasar.UI.Registros;
 using System;
 using System.Collections.Generic;
@@ -14,17 +16,31 @@ namespace ProyectoCooasar
 {
     public partial class MainMenu : Form
     {
-        public MainMenu()
+        public int IdUsuario;
+        public MainMenu(int IdUsuario)
         {
             InitializeComponent();
-            rLogin l = new rLogin();
-            l.ShowDialog();
-            // MostrarUsuario();
+            this.IdUsuario = IdUsuario;
+            MostrarUsuario(IdUsuario);
         }
 
         public void MostrarUsuario(int id)
         {
 
+
+            if(id > 0)
+            {
+                RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+                Usuarios usuario = repositorio.Buscar(id);
+
+                Usuario_label.Text = usuario.Usuario.ToString();
+                Permiso_label.Text = usuario.Permiso.ToString();
+            }
+            else
+            {
+                Usuario_label.Text = "Solo Usuarios";
+                Permiso_label.Text = "Nuevo";
+            }
 
         }
 
@@ -32,7 +48,7 @@ namespace ProyectoCooasar
         {
             if(Permiso_label.Text == "Almacen" || Permiso_label.Text == "Administrador")
             {
-                rProductos p = new rProductos();
+                rProductos p = new rProductos(IdUsuario);
                 p.Show();
             }
             else
@@ -46,7 +62,7 @@ namespace ProyectoCooasar
         {
             if(Permiso_label.Text == "Contador" || Permiso_label.Text == "Administrador")
             {
-                rProveedores p = new rProveedores();
+                rProveedores p = new rProveedores(IdUsuario);
                 p.Show();
             }
             else
@@ -60,7 +76,7 @@ namespace ProyectoCooasar
         {
             if(Permiso_label.Text == "Contador" || Permiso_label.Text == "Administrador")
             {
-                rCompras o = new rCompras();
+                rCompras o = new rCompras(IdUsuario);
                 o.Show();
             }
             else
@@ -130,7 +146,7 @@ namespace ProyectoCooasar
         {
             if (Permiso_label.Text == "Administrador" || Permiso_label.Text == "Contador")
             {
-                rPagos p = new rPagos();
+                rPagos p = new rPagos(IdUsuario);
                 p.Show();
             }
             else
@@ -151,11 +167,6 @@ namespace ProyectoCooasar
             {
                 MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-        }
-
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
 
         }
     }

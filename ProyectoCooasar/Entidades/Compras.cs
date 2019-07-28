@@ -15,7 +15,7 @@ namespace Entidades
         public int ProveedorId  { get; set; }
         public decimal Balance { get; set; }
         public int Itbis { get; set; }
-        //public int UsuarioId { get; set; }
+        public int UsuarioId { get; set; }
 
         public virtual List<ComprasDetalle> DetalleCompra { get; set; }
 
@@ -26,7 +26,7 @@ namespace Entidades
             ProveedorId = 0;
             Balance = 0;
             Itbis = 0;
-
+            UsuarioId = 0;
             DetalleCompra = new List<ComprasDetalle>();
         }
 

@@ -75,7 +75,7 @@ namespace ProyectoCooasar.UI.Registros
 
             return paso;
         }
-
+        int IdUsuario;
         private bool ValidarLogin()
         {
             bool paso = false;
@@ -94,6 +94,7 @@ namespace ProyectoCooasar.UI.Registros
                 {
                     if(Usuario_textBox.Text == item.Usuario && Clave_textBox.Text == item.Clave)
                     {
+                        IdUsuario = item.UsuarioId;
                         paso = true;
                         break;
                     }
@@ -114,7 +115,9 @@ namespace ProyectoCooasar.UI.Registros
                 MessageBox.Show("Usuaio No valido", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            MainMenu main = new MainMenu()
+            MainMenu main = new MainMenu(IdUsuario);
+            Hide();
+            main.ShowDialog();
             Dispose();
         }
          

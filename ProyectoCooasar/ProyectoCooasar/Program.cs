@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoCooasar.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace ProyectoCooasar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            Application.Run(new rLogin());
         }
     }
 }

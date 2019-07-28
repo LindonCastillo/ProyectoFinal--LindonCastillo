@@ -17,10 +17,12 @@ namespace ProyectoCooasar.UI.Registros
 {
     public partial class rCompras : Form
     {
+        public int IdUsuario;
         public List<ComprasDetalle> Detalle { get; set; }
-        public rCompras()
+        public rCompras(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
             this.Detalle = new List<ComprasDetalle>();
         }
 
@@ -120,6 +122,7 @@ namespace ProyectoCooasar.UI.Registros
             compras.Itbis = (int)Itbis_numericUpDown.Value;
             compras.ProveedorId = (int)ProveedorId_numericUpDown.Value;
             compras.Balance = CalculoBalance();
+            compras.UsuarioId = IdUsuario;
 
             compras.DetalleCompra = this.Detalle;
 

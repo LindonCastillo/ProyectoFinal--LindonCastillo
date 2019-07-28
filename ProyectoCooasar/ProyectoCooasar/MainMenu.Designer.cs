@@ -42,16 +42,16 @@
             this.proveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.Permiso_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Usuario_label = new System.Windows.Forms.Label();
-            this.Permiso_label = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -162,6 +162,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::ProyectoCooasar.Properties.Resources.LA_VACA;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -169,19 +170,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.Usuario_label);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.Permiso_label);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 276);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 81);
-            this.panel1.TabIndex = 2;
             // 
             // label1
             // 
@@ -192,6 +180,15 @@
             this.label1.Size = new System.Drawing.Size(69, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Permiso:";
+            // 
+            // Permiso_label
+            // 
+            this.Permiso_label.AutoSize = true;
+            this.Permiso_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Permiso_label.Location = new System.Drawing.Point(153, 48);
+            this.Permiso_label.Name = "Permiso_label";
+            this.Permiso_label.Size = new System.Drawing.Size(0, 16);
+            this.Permiso_label.TabIndex = 0;
             // 
             // label2
             // 
@@ -209,19 +206,8 @@
             this.Usuario_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuario_label.Location = new System.Drawing.Point(153, 23);
             this.Usuario_label.Name = "Usuario_label";
-            this.Usuario_label.Size = new System.Drawing.Size(51, 16);
+            this.Usuario_label.Size = new System.Drawing.Size(0, 16);
             this.Usuario_label.TabIndex = 0;
-            this.Usuario_label.Text = "Admin";
-            // 
-            // Permiso_label
-            // 
-            this.Permiso_label.AutoSize = true;
-            this.Permiso_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Permiso_label.Location = new System.Drawing.Point(153, 48);
-            this.Permiso_label.Name = "Permiso_label";
-            this.Permiso_label.Size = new System.Drawing.Size(53, 16);
-            this.Permiso_label.TabIndex = 0;
-            this.Permiso_label.Text = "Nuevo";
             // 
             // pictureBox2
             // 
@@ -233,12 +219,26 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.Usuario_label);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.Permiso_label);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 235);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(342, 79);
+            this.panel1.TabIndex = 2;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(340, 357);
+            this.ClientSize = new System.Drawing.Size(340, 310);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.pictureBox1);
@@ -246,13 +246,12 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainMenu";
             this.Text = "MenuPrincipal";
-            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,12 +272,12 @@
         private System.Windows.Forms.ToolStripMenuItem pagosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label Usuario_label;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Permiso_label;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Permiso_label;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Usuario_label;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

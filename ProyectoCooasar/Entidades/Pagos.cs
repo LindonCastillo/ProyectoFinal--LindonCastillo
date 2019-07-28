@@ -13,7 +13,7 @@ namespace Entidades
         public int PagoId { get; set; }
         public DateTime Fecha { get; set; }
         public decimal PagoTotal { get; set; }
-        //public int UsuarioId { get; set; }
+        public int UsuarioId { get; set; }
 
         public virtual List<PagosDetalle> DetallePagos { get; set; }
 
@@ -22,6 +22,7 @@ namespace Entidades
             PagoId = 0;
             Fecha = DateTime.Now;
             PagoTotal = 0;
+            UsuarioId = 0;
 
             DetallePagos = new List<PagosDetalle>();
         }

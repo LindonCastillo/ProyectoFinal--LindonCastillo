@@ -17,7 +17,7 @@ namespace ProyectoCooasar.Entidades
         public decimal PrecioCompra { get; set; }
         public decimal PrecioVenta { get; set; }
         public int ITBIS { get; set; }
-        //public int UsuarioId { get; set; }
+        public int UsuarioId { get; set; }
 
         public Productos()
         {
@@ -28,7 +28,7 @@ namespace ProyectoCooasar.Entidades
             PrecioCompra = 0;
             PrecioVenta = 0;
             ITBIS = 0;
-            //UsuarioId = 0;
+            UsuarioId = 0;
         }
     }
 }
