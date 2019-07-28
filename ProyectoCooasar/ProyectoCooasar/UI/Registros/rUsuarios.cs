@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,6 +28,9 @@ namespace ProyectoCooasar.UI.Registros
             Email_textBox.Text = string.Empty;
             Usuario_textBox.Text = string.Empty;
             Clave_textBox.Text = string.Empty;
+            Administrador_radioButton.Checked = false;
+            Contador_radioButton.Checked = false;
+            Almacen_radioButton.Checked = false;
             FechaIngreso_dateTimePicker.Value = DateTime.Now;
         }
 
@@ -66,6 +70,12 @@ namespace ProyectoCooasar.UI.Registros
                 paso = false;
             }
 
+            if (Administrador_radioButton.Checked == false && Contador_radioButton.Checked == false && Almacen_radioButton.Checked == false)
+            {
+                ErrorProvider.SetError(Niveles_panel, "Se debe seleccionar un ragon");
+                paso = false;
+            }
+
             if (UsuarioId_numericUpDown.Value == 0)
             {
                 RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
@@ -85,6 +95,20 @@ namespace ProyectoCooasar.UI.Registros
             return paso;
         }
 
+        private string ElegirNivel()
+        {
+            string nivel = string.Empty;
+            if (Administrador_radioButton.Checked)
+                nivel = "Administrador";
+
+            if (Contador_radioButton.Checked)
+                nivel = "Contador";
+
+            if (Almacen_radioButton.Checked)
+                nivel = "Almacen";
+
+            return nivel;
+        }
         private Usuarios LlenarClase()
         {
             Usuarios Usuario = new Usuarios();
@@ -93,11 +117,23 @@ namespace ProyectoCooasar.UI.Registros
             Usuario.Email = Convert.ToString(Email_textBox.Text.Trim());
             Usuario.Usuario = Convert.ToString(Usuario_textBox.Text.Trim());
             Usuario.Clave = Convert.ToString(Clave_textBox.Text.Trim());
+            Usuario.Permiso = ElegirNivel();
             Usuario.FechaIngreso = FechaIngreso_dateTimePicker.Value;
 
             return Usuario;
         }
 
+        private void LlenarRadioButton(Usuarios usuario)
+        {
+            if (usuario.Permiso == "Administrador")
+                Administrador_radioButton.Checked = true;
+
+            if (usuario.Permiso == "Contador")
+                Contador_radioButton.Checked = true;
+
+            if (usuario.Permiso == "Almacen")
+                Almacen_radioButton.Checked = true;
+        }
         private void LlenarCampos(Usuarios usuarios)
         {
             UsuarioId_numericUpDown.Value = usuarios.UsuarioId;
@@ -106,6 +142,7 @@ namespace ProyectoCooasar.UI.Registros
             Usuario_textBox.Text = usuarios.Usuario;
             Clave_textBox.Text = usuarios.Clave;
             FechaIngreso_dateTimePicker.Value = usuarios.FechaIngreso;
+            LlenarRadioButton(usuarios);
         }
 
         private bool ExiteEnLaBaseDeDatos()

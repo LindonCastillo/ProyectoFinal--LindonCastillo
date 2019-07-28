@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoCooasar.BLL;
+using ProyectoCooasar.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,7 @@ namespace ProyectoCooasar.UI.Registros
 {
     public partial class rLogin : Form
     {
+
         public rLogin()
         {
             InitializeComponent();
@@ -72,6 +75,7 @@ namespace ProyectoCooasar.UI.Registros
 
             return paso;
         }
+
         private bool ValidarLogin()
         {
             bool paso = false;
@@ -79,6 +83,16 @@ namespace ProyectoCooasar.UI.Registros
             if(Usuario_textBox.Text =="Admin" && Clave_textBox.Text == "12345")
             {
                 paso = true;
+            }
+            else
+            {
+                RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+                var listado = new List<Usuarios>();
+                listado = repositorio.GetList(p => true);
+                foreach (var item in listado)
+                {
+                    if(Usuario_textBox.Text == item.Nombre && Clave_textBox.Text == item.Clave) { }
+                }
             }
 
             return paso;

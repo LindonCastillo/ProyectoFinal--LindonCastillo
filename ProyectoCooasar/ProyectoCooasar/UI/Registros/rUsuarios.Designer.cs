@@ -49,13 +49,13 @@
             this.FechaIngreso_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Niveles_panel = new System.Windows.Forms.Panel();
             this.Almacen_radioButton = new System.Windows.Forms.RadioButton();
             this.Administrador_radioButton = new System.Windows.Forms.RadioButton();
             this.Contador_radioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioId_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.Niveles_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -240,16 +240,16 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Nivel Usuario";
             // 
-            // panel1
+            // Niveles_panel
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Almacen_radioButton);
-            this.panel1.Controls.Add(this.Administrador_radioButton);
-            this.panel1.Controls.Add(this.Contador_radioButton);
-            this.panel1.Location = new System.Drawing.Point(115, 205);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(164, 71);
-            this.panel1.TabIndex = 28;
+            this.Niveles_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Niveles_panel.Controls.Add(this.Almacen_radioButton);
+            this.Niveles_panel.Controls.Add(this.Administrador_radioButton);
+            this.Niveles_panel.Controls.Add(this.Contador_radioButton);
+            this.Niveles_panel.Location = new System.Drawing.Point(115, 205);
+            this.Niveles_panel.Name = "Niveles_panel";
+            this.Niveles_panel.Size = new System.Drawing.Size(164, 71);
+            this.Niveles_panel.TabIndex = 28;
             // 
             // Almacen_radioButton
             // 
@@ -292,7 +292,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 365);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Niveles_panel);
             this.Controls.Add(this.FechaIngreso_dateTimePicker);
             this.Controls.Add(this.Clave_textBox);
             this.Controls.Add(this.Usuario_textBox);
@@ -316,8 +316,8 @@
             this.Text = "Registro de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioId_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Niveles_panel.ResumeLayout(false);
+            this.Niveles_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,7 +343,7 @@
         private System.Windows.Forms.TextBox Clave_textBox;
         private System.Windows.Forms.DateTimePicker FechaIngreso_dateTimePicker;
         private System.Windows.Forms.ErrorProvider ErrorProvider;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Niveles_panel;
         private System.Windows.Forms.RadioButton Almacen_radioButton;
         private System.Windows.Forms.RadioButton Administrador_radioButton;
         private System.Windows.Forms.RadioButton Contador_radioButton;

@@ -197,10 +197,8 @@ namespace ProyectoCooasar.UI.Registros
         }
 
         private void Recontar(Pagos pagos)
-        {
-            var detalles = pagos.DetallePagos;
-
-            foreach (var item in detalles)
+        { 
+            foreach (var item in pagos.DetallePagos)
             {
                 var compraId = item.CompraId;
                 Compras compra = ComprasBLL.Buscar(compraId);
