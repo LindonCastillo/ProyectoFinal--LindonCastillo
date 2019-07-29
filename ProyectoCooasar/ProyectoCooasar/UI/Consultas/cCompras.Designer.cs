@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cCompras));
             this.FiltroFecha_checkBox = new System.Windows.Forms.CheckBox();
-            this.Imprimir_button = new System.Windows.Forms.Button();
             this.Consulta_dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,19 +56,6 @@
             this.FiltroFecha_checkBox.TabIndex = 29;
             this.FiltroFecha_checkBox.Text = "Filtrar por Fecha";
             this.FiltroFecha_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // Imprimir_button
-            // 
-            this.Imprimir_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Imprimir_button.Image = global::ProyectoCooasar.Properties.Resources.Impresora;
-            this.Imprimir_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Imprimir_button.Location = new System.Drawing.Point(606, 406);
-            this.Imprimir_button.Name = "Imprimir_button";
-            this.Imprimir_button.Size = new System.Drawing.Size(112, 36);
-            this.Imprimir_button.TabIndex = 31;
-            this.Imprimir_button.Text = "Imprimir";
-            this.Imprimir_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Imprimir_button.UseVisualStyleBackColor = true;
             // 
             // Consulta_dataGridView
             // 
@@ -208,9 +194,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 448);
+            this.ClientSize = new System.Drawing.Size(731, 414);
             this.Controls.Add(this.FiltroFecha_checkBox);
-            this.Controls.Add(this.Imprimir_button);
             this.Controls.Add(this.Consulta_dataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -230,7 +215,6 @@
         #endregion
 
         private System.Windows.Forms.CheckBox FiltroFecha_checkBox;
-        private System.Windows.Forms.Button Imprimir_button;
         private System.Windows.Forms.DataGridView Consulta_dataGridView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
