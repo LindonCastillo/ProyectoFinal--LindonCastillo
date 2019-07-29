@@ -8,7 +8,8 @@ Estas instrucciones te permitirán utilizar el sistema como es debido y de esa m
 
 En este registro se debe colocar los nombres de usuario y contraseñas respectivos para poder ingresar si no hay ninguno usuarioingresado entonces se debe introducir el Usuario: Admin y en clave: asdfghjkl.  Cabe destacar que solo se podrán ingresar usuarios con este mismo.
 
-![Captura de MainMenu](https://user-images.githubusercontent.com/50345256/62082315-83b7be00-b222-11e9-953c-b2acd038b3a0.PNG)
+![Main](https://user-images.githubusercontent.com/50345256/62087473-d21f8980-b22f-11e9-93e4-dc9572475040.PNG)
+Ver 2.0
 
 Esta ventana es el menú principal en la cual se pueden seleccionar los diferentes registros para empezar a utilizar el programa.
 
