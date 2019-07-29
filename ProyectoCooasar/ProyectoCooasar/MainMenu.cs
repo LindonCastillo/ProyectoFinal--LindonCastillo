@@ -104,7 +104,7 @@ namespace ProyectoCooasar
         {
             if (Permiso_label.Text == "Nuevo" || Permiso_label.Text == "Administrador")
             {
-                rUsuarios u = new rUsuarios();
+                rUsuarios u = new rUsuarios(IdUsuario);
                 u.Show();
             }
             else

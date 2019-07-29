@@ -1,6 +1,6 @@
 ﻿namespace ProyectoCooasar.UI.Consultas
 {
-    partial class cCompras
+    partial class cPagos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cCompras));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cPagos));
             this.FiltroFecha_checkBox = new System.Windows.Forms.CheckBox();
             this.Consulta_dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,10 +50,10 @@
             // FiltroFecha_checkBox
             // 
             this.FiltroFecha_checkBox.AutoSize = true;
-            this.FiltroFecha_checkBox.Location = new System.Drawing.Point(19, 15);
+            this.FiltroFecha_checkBox.Location = new System.Drawing.Point(18, 11);
             this.FiltroFecha_checkBox.Name = "FiltroFecha_checkBox";
             this.FiltroFecha_checkBox.Size = new System.Drawing.Size(102, 17);
-            this.FiltroFecha_checkBox.TabIndex = 29;
+            this.FiltroFecha_checkBox.TabIndex = 34;
             this.FiltroFecha_checkBox.Text = "Filtrar por Fecha";
             this.FiltroFecha_checkBox.UseVisualStyleBackColor = true;
             // 
@@ -62,11 +62,11 @@
             this.Consulta_dataGridView.AllowUserToAddRows = false;
             this.Consulta_dataGridView.AllowUserToDeleteRows = false;
             this.Consulta_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Consulta_dataGridView.Location = new System.Drawing.Point(12, 99);
+            this.Consulta_dataGridView.Location = new System.Drawing.Point(11, 95);
             this.Consulta_dataGridView.Name = "Consulta_dataGridView";
             this.Consulta_dataGridView.ReadOnly = true;
             this.Consulta_dataGridView.Size = new System.Drawing.Size(706, 303);
-            this.Consulta_dataGridView.TabIndex = 30;
+            this.Consulta_dataGridView.TabIndex = 35;
             // 
             // panel1
             // 
@@ -75,10 +75,10 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.Desde_dateTimePicker);
             this.panel1.Controls.Add(this.Hasta_dateTimePicker);
-            this.panel1.Location = new System.Drawing.Point(12, 24);
+            this.panel1.Location = new System.Drawing.Point(11, 20);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 61);
-            this.panel1.TabIndex = 32;
+            this.panel1.TabIndex = 36;
             // 
             // label1
             // 
@@ -128,10 +128,10 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.Filtro_comboBox);
             this.panel2.Controls.Add(this.Criterio_textBox);
-            this.panel2.Location = new System.Drawing.Point(304, 24);
+            this.panel2.Location = new System.Drawing.Point(303, 20);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(414, 61);
-            this.panel2.TabIndex = 33;
+            this.panel2.TabIndex = 37;
             // 
             // label3
             // 
@@ -153,7 +153,7 @@
             this.Consultar_button.Size = new System.Drawing.Size(41, 42);
             this.Consultar_button.TabIndex = 21;
             this.Consultar_button.UseVisualStyleBackColor = true;
-            this.Consultar_button.Click += new System.EventHandler(this.Consultar_button_Click_1);
+            this.Consultar_button.Click += new System.EventHandler(this.Consultar_button_Click);
             // 
             // label2
             // 
@@ -172,11 +172,8 @@
             this.Filtro_comboBox.Items.AddRange(new object[] {
             "Todo",
             "Id",
-            "Nombre",
-            "Cantidad",
-            "Precio de Compra",
-            "Precio de Venta",
-            "ITBIS"});
+            "Balance",
+            "UsuarioId"});
             this.Filtro_comboBox.Location = new System.Drawing.Point(6, 30);
             this.Filtro_comboBox.Name = "Filtro_comboBox";
             this.Filtro_comboBox.Size = new System.Drawing.Size(118, 23);
@@ -190,18 +187,18 @@
             this.Criterio_textBox.Size = new System.Drawing.Size(229, 22);
             this.Criterio_textBox.TabIndex = 23;
             // 
-            // cCompras
+            // cPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 414);
+            this.ClientSize = new System.Drawing.Size(728, 409);
             this.Controls.Add(this.FiltroFecha_checkBox);
             this.Controls.Add(this.Consulta_dataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "cCompras";
-            this.Text = "Conuslta de Compras";
+            this.Name = "cPagos";
+            this.Text = "Consulta de Pagos";
             ((System.ComponentModel.ISupportInitialize)(this.Consulta_dataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -15,9 +15,11 @@ namespace ProyectoCooasar.UI.Registros
 {
     public partial class rUsuarios : Form
     {
-        public rUsuarios()
+        public int IdUsuario;
+        public rUsuarios(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         private void Limpiar()
@@ -222,6 +224,13 @@ namespace ProyectoCooasar.UI.Registros
             RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
             int id = Convert.ToInt32(UsuarioId_numericUpDown.Value);
             ErrorProvider.Clear();
+
+            if (UsuarioId_numericUpDown.Value == IdUsuario)
+            {
+                MessageBox.Show("No se puede eliminar este usuario", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+
+            }
 
             Limpiar();
             try
