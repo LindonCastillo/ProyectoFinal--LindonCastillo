@@ -176,5 +176,18 @@ namespace ProyectoCooasar
             Dispose();
             login.ShowDialog();
         }
+
+        private void ConsultaDePagosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Permiso_label.Text == "Administrador" || Permiso_label.Text == "Contador")
+            {
+                cPagos c = new cPagos();
+                c.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No Hay Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

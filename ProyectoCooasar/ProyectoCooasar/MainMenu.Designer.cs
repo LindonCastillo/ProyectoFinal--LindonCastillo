@@ -49,6 +49,7 @@
             this.Usuario_label = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.consultaDePagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,7 +61,8 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrosToolStripMenuItem,
             this.consultasToolStripMenuItem,
-            this.logOutToolStripMenuItem});
+            this.logOutToolStripMenuItem,
+            this.consultaDePagosToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(340, 24);
@@ -129,7 +131,6 @@
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "&Consultas";
-          
             // 
             // productosToolStripMenuItem1
             // 
@@ -243,6 +244,13 @@
             this.panel1.Size = new System.Drawing.Size(342, 79);
             this.panel1.TabIndex = 2;
             // 
+            // consultaDePagosToolStripMenuItem
+            // 
+            this.consultaDePagosToolStripMenuItem.Name = "consultaDePagosToolStripMenuItem";
+            this.consultaDePagosToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.consultaDePagosToolStripMenuItem.Text = "&Consulta de Pagos";
+            this.consultaDePagosToolStripMenuItem.Click += new System.EventHandler(this.ConsultaDePagosToolStripMenuItem_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +297,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaDePagosToolStripMenuItem;
     }
 }
 

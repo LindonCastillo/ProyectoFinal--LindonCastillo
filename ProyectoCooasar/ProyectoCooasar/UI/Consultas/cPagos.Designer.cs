@@ -172,7 +172,7 @@
             this.Filtro_comboBox.Items.AddRange(new object[] {
             "Todo",
             "Id",
-            "Balance",
+            "PagoTotal",
             "UsuarioId"});
             this.Filtro_comboBox.Location = new System.Drawing.Point(6, 30);
             this.Filtro_comboBox.Name = "Filtro_comboBox";
