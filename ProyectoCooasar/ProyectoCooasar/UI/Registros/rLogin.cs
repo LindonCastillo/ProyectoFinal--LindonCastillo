@@ -75,6 +75,15 @@ namespace ProyectoCooasar.UI.Registros
 
             return paso;
         }
+
+        public string DesEncriptar(string cadenaDesencriptada)
+        {
+            string resultado = string.Empty;
+            byte[] decryted = Convert.FromBase64String(cadenaDesencriptada);
+            resultado = System.Text.Encoding.Unicode.GetString(decryted);
+
+            return resultado;
+        }
         int IdUsuario;
         private bool ValidarLogin()
         {
@@ -92,7 +101,7 @@ namespace ProyectoCooasar.UI.Registros
                 listado = repositorio.GetList(p => true);
                 foreach (var item in listado)
                 {
-                    if(Usuario_textBox.Text == item.Usuario && Clave_textBox.Text == item.Clave)
+                    if(Usuario_textBox.Text == item.Usuario && Clave_textBox.Text == DesEncriptar(item.Clave))
                     {
                         IdUsuario = item.UsuarioId;
                         paso = true;
@@ -112,7 +121,7 @@ namespace ProyectoCooasar.UI.Registros
 
             if (!ValidarLogin())
             {
-                MessageBox.Show("Usuaio No valido", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Usuario No Valido", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             MainMenu main = new MainMenu(IdUsuario);

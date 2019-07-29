@@ -169,5 +169,12 @@ namespace ProyectoCooasar
             }
 
         }
+
+        private void LogOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rLogin login = new rLogin();
+            Dispose();
+            login.ShowDialog();
+        }
     }
 }
