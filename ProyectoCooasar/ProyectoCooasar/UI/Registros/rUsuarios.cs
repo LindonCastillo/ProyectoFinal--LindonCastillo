@@ -109,6 +109,24 @@ namespace ProyectoCooasar.UI.Registros
 
             return nivel;
         }
+
+        public string Encriptar(string cadenaEncriptada)
+        {
+            string resultado = string.Empty;
+            byte[] encryted = System.Text.Encoding.Unicode.GetBytes(cadenaEncriptada);
+            resultado = Convert.ToBase64String(encryted);
+
+            return resultado;
+        }
+
+        public string DesEncriptar(string cadenaDesencriptada)
+        {
+            string resultado = string.Empty;
+            byte[] decryted = Convert.FromBase64String(cadenaDesencriptada);
+            resultado = System.Text.Encoding.Unicode.GetString(decryted);
+
+            return resultado;
+        }
         private Usuarios LlenarClase()
         {
             Usuarios Usuario = new Usuarios();
@@ -116,7 +134,7 @@ namespace ProyectoCooasar.UI.Registros
             Usuario.Nombre = Convert.ToString(Nombre_textBox.Text.Trim());
             Usuario.Email = Convert.ToString(Email_textBox.Text.Trim());
             Usuario.Usuario = Convert.ToString(Usuario_textBox.Text.Trim());
-            Usuario.Clave = Convert.ToString(Clave_textBox.Text.Trim());
+            Usuario.Clave = Encriptar(Clave_textBox.Text.Trim());
             Usuario.Permiso = ElegirNivel();
             Usuario.FechaIngreso = FechaIngreso_dateTimePicker.Value;
 
@@ -134,13 +152,14 @@ namespace ProyectoCooasar.UI.Registros
             if (usuario.Permiso == "Almacen")
                 Almacen_radioButton.Checked = true;
         }
+
         private void LlenarCampos(Usuarios usuarios)
         {
             UsuarioId_numericUpDown.Value = usuarios.UsuarioId;
             Nombre_textBox.Text = usuarios.Nombre;
             Email_textBox.Text = usuarios.Email;
             Usuario_textBox.Text = usuarios.Usuario;
-            Clave_textBox.Text = usuarios.Clave;
+            Clave_textBox.Text = DesEncriptar(usuarios.Clave);
             FechaIngreso_dateTimePicker.Value = usuarios.FechaIngreso;
             LlenarRadioButton(usuarios);
         }
